@@ -19,11 +19,11 @@ html {
 
 body,
 html {
-	font-size: $em-base;
- 
-					@include media-breakpoint-only(xl){
-		font-size: 14px;
+	
+	@include media-breakpoint-up(xxl){
+		font-size: $em-base;
 					}
+					font-size: 14px;
 	// @include font-size(1rem);
 }
 

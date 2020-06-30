@@ -2,7 +2,13 @@
 		font-size: rem(14);
 		p{
 			font-size: rem(14);
+			span{
+				display: inline-block;
+			}
 
+		}
+		a{
+			display: inline-block;
 		}
 	&__inner{
 		border-top: 1px solid #BDBDBD;
@@ -21,10 +27,15 @@
 
 		opacity: 0.5;
 		font-size: 10px;
+		padding-bottom: 1rem;
 	}
 	*{
 
 		letter-spacing: normal;
+	}
+
+	.soc{
+		margin-bottom: 1rem;
 	}
 // 
 @include media-breakpoint-up(xl) {}

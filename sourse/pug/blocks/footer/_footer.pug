@@ -3,13 +3,13 @@ mixin footer()
 		.container
 			+e.inner
 				.row
-					.col
-						p Адрес компании: 109750, Москва, ул. Героев Сталинграда, д. 4 телефон: #[a(href="tel:+7495885-55-55") +7 495 885-55-55], e-mail: #[a(href="mailto:sample@sample.com") sample@sample.com ]
+					.col-md
+						p Адрес компании: 109750, Москва, ул. Героев Сталинграда, д. 4  <span> телефон: #[a(href="tel:+7495885-55-55") +7 495 885-55-55],</span> <span> e-mail: #[a(href="mailto:sample@sample.com") sample@sample.com ] </span>
 						+e.copy © 2020. Международный молодежный образовательный форум «Евразия Global»
 					.col-xxl-3.col-auto
 						+soc()
-					.col-auto.text-right
-						a(href="#") Политика конфиденциальности
-						br.mb-2
+					.col-sm-auto.text-sm-right
+						a.mb-2(href="#") Политика конфиденциальности
+						br
 						a(href="#") Пользовательское соглашение
 
