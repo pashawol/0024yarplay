@@ -1,36 +1,6 @@
 
 mixin modal() 
- 
-	//- #modal-win.modal.fade(tabindex='-1', role='dialog', aria-labelledby='modal-win', aria-hidden='true')
-		
-	//- 	div( class="   modal-dialog  modal-dialog-centered  " role='document') 
-	//- 		+form-wrap()(class=" modal-content modal-win ")
-	//- 			button.close.mfp-close(type='button', data-dismiss='modal', aria-label='Close')  ×
-	//- 			+input("tel","Введите ваш телефон")(name="tel" required) 
-				
-	//- 			+e.BUTTON.btn.btn.btn-accent.btn-block Отправить
-	//- 			+b.wrap-polite
-	//- 				+b.custom-input.polite
-	//- 					+b.LABEL.custom-input.polite
-	//- 						+e.INPUT.input.__input-radio(type="checkbox" checked name="polite" required value="")
-	//- 						+e.SPAN.lab
-	//- 						| Даю 
-	//- 						| 
-	//- 						span.link( data-toggle='modal', data-target='#exampleModal2') согласие 
-
-	//- 						| на хранение и обработку   персональных данных
-	
- 
-
-	//- #thanks.modal.fade(tabindex='-1', role='dialog', aria-labelledby='thanks', aria-hidden='true')
-	//- 	div( class=" ttext-center  modal-dialog  modal-dialog-centered  " role='document') 
-	//- 		+form-wrap()(class=" modal-content modal-win ")
-	//- 			button.close.mfp-close(type='button', data-dismiss='modal', aria-label='Close')  ×
-	//- 			br
-	//- 			.h2 Заявка принята
-	//- 			br
-	//- 			.h3 Скоро с Вами свяжутся
-	//- 			br 
+  
 	.d-none
 		+form-wrap()(id="modal-call" class="  modal-win modal-form" )
 			.text-center
@@ -43,4 +13,11 @@ mixin modal()
 			+e.INPUT.btn(type="submit" value="Рассчитать") 
 			+polite()
 		// #modal-call
+		
+		div(id="modal-thanks" class="  modal-win modal-form" )
+			.text-center
+				h2.ttu Спасибо!
+				p  Мы скоро с Вами свяжемся
+		// #modal-thanks
+
 	// modal

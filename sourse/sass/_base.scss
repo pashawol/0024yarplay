@@ -20,6 +20,10 @@ html {
 body,
 html {
 	font-size: $em-base;
+ 
+					@include media-breakpoint-only(xl){
+		font-size: 14px;
+					}
 	// @include font-size(1rem);
 }
 
