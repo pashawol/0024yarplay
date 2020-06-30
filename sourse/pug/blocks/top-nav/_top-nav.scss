@@ -7,13 +7,16 @@
 	&__logo{
 		a{
 			position: relative;
-			&::before{
-				content: url(../img/logo-after.svg);
-				position: absolute;
-				top: rem(-80);
-				left: rem(-22);
-				z-index: -1;
-			}
+				@include media-breakpoint-up(sm) {
+
+					&::before{
+						content: url(../img/logo-after.svg);
+						position: absolute;
+						top: rem(-80);
+						left: rem(-22);
+						z-index: -1;
+					}
+				}
 		}
 	}
 	&__link{
