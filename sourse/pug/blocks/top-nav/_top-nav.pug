@@ -22,6 +22,16 @@ mixin top-nav()
 	// start top-nav
 	+b.top-nav.block-with-lazy
 		.container
-			+mnu()
+			.row
+				.col-lg-auto.col
+					+e.logo
+						a(href="/")
+							img(src="img/logo.svg", alt="")
+				.col.d-none.d-lg-block
+					//- +mnu()
+				.col-sm-auto.text-sm-right
+					+e.link--tel(href="tel:8499490-33-24") 8 499 490-33-24
+					br
+					+e.link--mail(href="mailto:info@yarplay.ru") info@yarplay.ru
 					
 	// end top-nav

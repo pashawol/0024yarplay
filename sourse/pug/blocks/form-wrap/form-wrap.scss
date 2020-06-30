@@ -1,16 +1,25 @@
 .form-wrap{
+	
  	&__input-wrap{
 			// @extend .form-group;
-			
+			margin-bottom: rem(25);
+			position: relative;
 		}
 		&__input{
 			// @extend .form-control;
 		//  outline: 0 !important;
 		 resize: none;
+		 padding-top: rem(33);
  	}
  	&__btn{
  		cursor: pointer;
- 	}
+	 }
+	 &__title{
+		 position: absolute;
+		 left: $input-btn-padding-x;
+		 font-size: rem(14);
+		 top: rem(10);
+	 }
  	label{
  		width: 100%;
  		display: block;

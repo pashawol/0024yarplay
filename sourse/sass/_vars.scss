@@ -39,7 +39,7 @@ $blue: #0d6efd !default;
 $indigo: #6610f2 !default;
 $purple: #6f42c1 !default;
 $pink: #d63384 !default;
-$red: #dc3545 !default;
+$red: #f50000 !default;
 $orange: #fd7e14 !default;
 $yellow: #ffc107 !default;
 $green: #28a745 !default;
@@ -63,8 +63,8 @@ $cyan: #17a2b8 !default;
 //   "gray-dark": $gray-800) !default;
 // // scss-docs-end colors-map
 
-$primary: $blue !default;
-$secondary: $gray-600 !default;
+$primary: $red !default;
+$secondary: #828282 !default;
 $success: $green !default;
 $info: $cyan !default;
 $warning: $yellow !default;
@@ -93,109 +93,7 @@ $min-contrast-ratio: 3 !default;
 // Customize the light and dark text colors for use in our color contrast function.
 $color-contrast-dark: $gray-900 !default;
 $color-contrast-light: $white !default;
-
-// fusv-disable
-$blue-100: tint-color($blue, 8) !default;
-$blue-200: tint-color($blue, 6) !default;
-$blue-300: tint-color($blue, 4) !default;
-$blue-400: tint-color($blue, 2) !default;
-$blue-500: $blue !default;
-$blue-600: shade-color($blue, 2) !default;
-$blue-700: shade-color($blue, 4) !default;
-$blue-800: shade-color($blue, 6) !default;
-$blue-900: shade-color($blue, 8) !default;
-
-$indigo-100: tint-color($indigo, 8) !default;
-$indigo-200: tint-color($indigo, 6) !default;
-$indigo-300: tint-color($indigo, 4) !default;
-$indigo-400: tint-color($indigo, 2) !default;
-$indigo-500: $indigo !default;
-$indigo-600: shade-color($indigo, 2) !default;
-$indigo-700: shade-color($indigo, 4) !default;
-$indigo-800: shade-color($indigo, 6) !default;
-$indigo-900: shade-color($indigo, 8) !default;
-
-$purple-100: tint-color($purple, 8) !default;
-$purple-200: tint-color($purple, 6) !default;
-$purple-300: tint-color($purple, 4) !default;
-$purple-400: tint-color($purple, 2) !default;
-$purple-500: $purple !default;
-$purple-600: shade-color($purple, 2) !default;
-$purple-700: shade-color($purple, 4) !default;
-$purple-800: shade-color($purple, 6) !default;
-$purple-900: shade-color($purple, 8) !default;
-
-$pink-100: tint-color($pink, 8) !default;
-$pink-200: tint-color($pink, 6) !default;
-$pink-300: tint-color($pink, 4) !default;
-$pink-400: tint-color($pink, 2) !default;
-$pink-500: $pink !default;
-$pink-600: shade-color($pink, 2) !default;
-$pink-700: shade-color($pink, 4) !default;
-$pink-800: shade-color($pink, 6) !default;
-$pink-900: shade-color($pink, 8) !default;
-
-$red-100: tint-color($red, 8) !default;
-$red-200: tint-color($red, 6) !default;
-$red-300: tint-color($red, 4) !default;
-$red-400: tint-color($red, 2) !default;
-$red-500: $red !default;
-$red-600: shade-color($red, 2) !default;
-$red-700: shade-color($red, 4) !default;
-$red-800: shade-color($red, 6) !default;
-$red-900: shade-color($red, 8) !default;
-
-$orange-100: tint-color($orange, 8) !default;
-$orange-200: tint-color($orange, 6) !default;
-$orange-300: tint-color($orange, 4) !default;
-$orange-400: tint-color($orange, 2) !default;
-$orange-500: $orange !default;
-$orange-600: shade-color($orange, 2) !default;
-$orange-700: shade-color($orange, 4) !default;
-$orange-800: shade-color($orange, 6) !default;
-$orange-900: shade-color($orange, 8) !default;
-
-$yellow-100: tint-color($yellow, 8) !default;
-$yellow-200: tint-color($yellow, 6) !default;
-$yellow-300: tint-color($yellow, 4) !default;
-$yellow-400: tint-color($yellow, 2) !default;
-$yellow-500: $yellow !default;
-$yellow-600: shade-color($yellow, 2) !default;
-$yellow-700: shade-color($yellow, 4) !default;
-$yellow-800: shade-color($yellow, 6) !default;
-$yellow-900: shade-color($yellow, 8) !default;
-
-$green-100: tint-color($green, 8) !default;
-$green-200: tint-color($green, 6) !default;
-$green-300: tint-color($green, 4) !default;
-$green-400: tint-color($green, 2) !default;
-$green-500: $green !default;
-$green-600: shade-color($green, 2) !default;
-$green-700: shade-color($green, 4) !default;
-$green-800: shade-color($green, 6) !default;
-$green-900: shade-color($green, 8) !default;
-
-$teal-100: tint-color($teal, 8) !default;
-$teal-200: tint-color($teal, 6) !default;
-$teal-300: tint-color($teal, 4) !default;
-$teal-400: tint-color($teal, 2) !default;
-$teal-500: $teal !default;
-$teal-600: shade-color($teal, 2) !default;
-$teal-700: shade-color($teal, 4) !default;
-$teal-800: shade-color($teal, 6) !default;
-$teal-900: shade-color($teal, 8) !default;
-
-$cyan-100: tint-color($cyan, 8) !default;
-$cyan-200: tint-color($cyan, 6) !default;
-$cyan-300: tint-color($cyan, 4) !default;
-$cyan-400: tint-color($cyan, 2) !default;
-$cyan-500: $cyan !default;
-$cyan-600: shade-color($cyan, 2) !default;
-$cyan-700: shade-color($cyan, 4) !default;
-$cyan-800: shade-color($cyan, 6) !default;
-$cyan-900: shade-color($cyan, 8) !default;
-// fusv-enable
-
+ 
 // Characters which are escaped by the escape-svg function
 $escaped-characters: (("<", "%3c"),
   (">", "%3e"),
@@ -250,7 +148,7 @@ $negative-spacers: if($enable-negative-margins, negativify-map($spacers), null) 
 // Settings for the `<body>` element.
 
 $body-bg: $white !default;
-$body-color: $gray-900 !default;
+$body-color: $black !default;
 $body-text-align: null !default;
 
 
@@ -286,7 +184,7 @@ $grid-breakpoints: (xs: 0,
   md: 768px,
   lg: 992px,
   xl: 1200px,
-  xxl: 1400px) !default;
+  xxl: 1620px) !default;
 // scss-docs-end grid-breakpoints
 
 // @include _assert-ascending($grid-breakpoints, "$grid-breakpoints");
@@ -302,7 +200,7 @@ $container-max-widths: (sm: 540px,
   md: 720px,
   lg: 960px,
   xl: 1140px,
-  xxl: 1320px) !default;
+  xxl: 1590px) !default;
 // scss-docs-end container-max-widths
 
 // @include _assert-ascending($container-max-widths, "$container-max-widths");
@@ -330,7 +228,7 @@ $container-padding-x: $grid-gutter-width / 2 !default;
 $border-width: 1px !default;
 $border-color: $gray-300 !default;
 
-$border-radius: .25rem !default;
+$border-radius: rem(4) !default;
 $border-radius-sm: .2rem !default;
 $border-radius-lg: .3rem !default;
 
@@ -382,7 +280,7 @@ sans-serif,
 "Segoe UI Emoji",
 "Segoe UI Symbol",
 "Noto Color Emoji" !default;
-$font-family-monospace: SFMono-Regular,
+$font-family-monospace: $mono, SFMono-Regular,
 Menlo,
 Monaco,
 Consolas,
@@ -413,11 +311,11 @@ $line-height-sm: 1.25 !default;
 $line-height-lg: 2 !default;
 
 $h1-font-size: $font-size-base * 2.5 !default;
-$h2-font-size: $font-size-base * 2 !default;
-$h3-font-size: $font-size-base * 1.75 !default;
-$h4-font-size: $font-size-base * 1.5 !default;
-$h5-font-size: $font-size-base * 1.25 !default;
-$h6-font-size: $font-size-base !default;
+$h2-font-size: rem(40) !default;
+$h3-font-size: rem(30) !default;
+$h4-font-size: rem(24) !default;
+$h5-font-size: rem(20) !default;
+$h6-font-size: rem(18) !default;
 
 $headings-margin-bottom: $spacer / 2 !default;
 $headings-font-family: null !default;
@@ -529,8 +427,8 @@ $table-variants: ("primary": color-level($primary, $table-bg-level),
 //
 // Shared variables that are reassigned to `$input-` and `$btn-` specific variables.
 
-$input-btn-padding-y: .375rem !default;
-$input-btn-padding-x: .75rem !default;
+$input-btn-padding-y: rem(23) !default;
+$input-btn-padding-x: rem(20) !default;
 $input-btn-font-family: null !default;
 $input-btn-font-size: $font-size-base !default;
 $input-btn-line-height: $line-height-base !default;
@@ -611,10 +509,10 @@ $form-label-font-style: null !default;
 $form-label-font-weight: null !default;
 $form-label-color: null !default;
 
-$input-padding-y: $input-btn-padding-y !default;
+$input-padding-y: rem(11) !default;
 $input-padding-x: $input-btn-padding-x !default;
 $input-font-family: $input-btn-font-family !default;
-$input-font-size: $input-btn-font-size !default;
+$input-font-size: rem(20) !default;
 $input-font-weight: $font-weight-base !default;
 $input-line-height: $input-btn-line-height !default;
 
@@ -626,12 +524,12 @@ $input-padding-y-lg: $input-btn-padding-y-lg !default;
 $input-padding-x-lg: $input-btn-padding-x-lg !default;
 $input-font-size-lg: $input-btn-font-size-lg !default;
 
-$input-bg: $white !default;
+$input-bg: #F2F2F2 !default;
 $input-disabled-bg: $gray-200 !default;
 $input-disabled-border-color: null !default;
 
-$input-color: $gray-700 !default;
-$input-border-color: $gray-400 !default;
+$input-color: rgba(0,0,0, .8) !default;
+$input-border-color: #BDBDBD !default;
 $input-border-width: $input-btn-border-width !default;
 $input-box-shadow: $box-shadow-inset !default;
 
@@ -645,8 +543,8 @@ $input-focus-color: $input-color !default;
 $input-focus-width: $input-btn-focus-width !default;
 $input-focus-box-shadow: $input-btn-focus-box-shadow !default;
 
-$input-placeholder-color: $gray-600 !default;
-$input-plaintext-color: $body-color !default;
+$input-placeholder-color:rgba(0, 0, 0, .2) !default;
+$input-plaintext-color: rgba(0, 0, 0, .8) !default;
 
 $input-height-border: $input-border-width * 2 !default;
 

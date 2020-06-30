@@ -2,8 +2,19 @@ mixin sForm()
 	// start sForm
 	+b.SECTION.sForm.section#sForm&attributes(attributes)
 		.container
-			+b.section-title.text-center
-				h2 sForm
-				
-			.row
+			+b.form-wrap
+				+e.man-wrap
+				+e.wrapper
+				.row
+					.col-xl-auto
+						+e.caption
+							h2 Есть вопросы или хотите организовать мероприятие? #[span.text-primary Напишите нам!]
+							p Наши менеджеры сориентируют Вам по&nbsp;услугам и&nbsp;ценам в&nbsp;течении 20&nbsp;минут
+					.col-lg-auto
+						form
+							+input("Имя",'text','Ваше имя','name')
+							+input("+7(___)___-__-__",'tel','Номер телефона')
+							+input("sample@sample.com",'email','Ваш e-mail')
+							input.btn.btn-primary.btn-block.mb-3(type="submit" value="ОТПРАВИТЬ")
+							.small Согласен на обработку персональных данных
 	// end sForm

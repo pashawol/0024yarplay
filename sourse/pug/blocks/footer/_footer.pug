@@ -1,4 +1,15 @@
 mixin footer()
 	+b.FOOTER.footer.block-with-lazy
 		.container
-			h2 footer
+			+e.inner
+				.row
+					.col
+						p Адрес компании: 109750, Москва, ул. Героев Сталинграда, д. 4 телефон: #[a(href="tel:+7495885-55-55") +7 495 885-55-55], e-mail: #[a(href="mailto:sample@sample.com") sample@sample.com ]
+						+e.copy © 2020. Международный молодежный образовательный форум «Евразия Global»
+					.col-xxl-3.col-auto
+						+soc()
+					.col-auto.text-right
+						a(href="#") Политика конфиденциальности
+						br.mb-2
+						a(href="#") Пользовательское соглашение
+

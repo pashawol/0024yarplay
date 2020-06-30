@@ -1,6 +1,116 @@
 
 	// start .sForm
 	.sForm {
+		.form-wrap{
+			background: #FFFFFF;
+			border-radius: 20px;
+			color: $body-color;
+				@include media-breakpoint-up(xxl){
+
+					padding: rem(70) rem(70);
+					padding-right: rem(500);
+				}
+				padding-right: rem(460);
+				padding: rem(40) rem(30);
+			position: relative;
+			form{
+				position: relative;
+				z-index: 4;
+					@include media-breakpoint-up(xxl){
+
+						width: rem(407);
+					}
+							@include media-breakpoint-up(lg){
+
+								width: rem(327);
+							}
+			}
+			&__caption{
+				max-width: rem(700);
+						@include media-breakpoint-up(xl){
+
+							max-width: rem(450);
+						}
+			}
+				@include media-breakpoint-up(lg) {
+
+					&__man-wrap{
+						position: absolute;
+						right: rem(-70);
+						bottom: rem(-6);
+						&::before{
+							content: url(../img/form-after.svg);
+							position: absolute;
+							z-index: 2;
+							bottom: -150px;
+							@include media-breakpoint-up(xl) {
+								
+								left: -50px;
+							}
+							left: 50px;
+							
+						}
+						&::after{
+							content: url(../img/@2x/form-img.png);
+							position: relative;
+							z-index: 2;
+						}
+					}
+				}
+			&__wrapper{
+				position: absolute;
+				right: 0; 
+				width: rem(540);
+				height: rem(540);
+					@include media-breakpoint-up(lg) {
+						bottom: auto;
+						top: 0;
+					}
+					bottom: 0;
+				border-radius:0 20px 0 0;
+				overflow: hidden;
+				
+				&::before{
+					content: '';
+					position: absolute;
+					right: rem(-100);
+						@include media-breakpoint-up(lg) {
+							bottom: auto;
+							top: rem(-100);
+						 
+						width: rem(540);
+						height: rem(540);
+						background-color: $primary;
+						border-radius: 50%;
+						}
+				}
+			}
+			.row{
+				@include media-breakpoint-up(xxl) {
+
+					@include roww(rem(90))
+				}
+			}
+		}
+				h2{
+					text-transform: uppercase;
+					@extend .mono;
+					margin-bottom: rem(40);
+					position: relative;
+					z-index: 3;
+				}
+				p{
+					color: #828282;
+					max-width: rem(450);
+							position: relative;
+							z-index: 3;
+				}
+		.small{
+color: #828282;
+ letter-spacing: 0.05em;
+ font-size: rem(12);
+		}
+
 		 
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}

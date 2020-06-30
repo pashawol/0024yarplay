@@ -1,0 +1,18 @@
+mixin sServises()
+	// start sServises
+	+b.SECTION.sServises.pt-0.section#sServises&attributes(attributes)
+		.container 
+			.row
+				mixin item(i,t,p)
+					+e.col.col-lg-6
+						+e.item()&attributes(attributes)
+							h5!= t
+							p Давно выяснено, что при оценке дизайна и&nbsp;композиции читаемый текст мешает сосредоточиться. Lorem Ipsum используют потому, что тот
+							+e.link-more(href="#") Подробнее
+								+icon("chevron-down")
+							img(src=`img/@2x/servises-img-${i}.png`, alt="")
+				+item(`1`,`ТИМБИЛДИНГ`)(style='background-image: url(img/@2x/servises-bg-1.jpg);')
+				+item(`2`,`Бизнес мероприятия`)
+				+item(`4`,`Массовые мероприятия `)(style='background-image: url(img/@2x/servises-bg-4.jpg);')
+				+item(`3`,`Корпоративные мероприятия`)
+	// end sServises

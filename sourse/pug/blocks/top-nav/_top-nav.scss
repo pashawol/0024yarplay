@@ -1,33 +1,35 @@
 .top-nav {
-	padding-top: 15px;
-	// position: absolute;
-	top: 100%;
-	// @include clearfix;ss
-	z-index: 20;
-	padding-top: 3px;
-	@include mt;
-	padding-bottom: 10px;
-	top: 0;
-	left: 0;
-	width: 100%;
-
-	&.fixed {
-		width: 100vw;
-		bottom: auto;
-		margin-top: 0;
-		background-color: #fff;
+	padding-top: rem(50);
+	padding-bottom: rem(50);
+	.row{
+		align-items: center;
 	}
-
-	&__nav {
-		text-align: center;
-		list-style-type: none;
+	&__logo{
+		a{
+			position: relative;
+			&::before{
+				content: url(../img/logo-after.svg);
+				position: absolute;
+				top: rem(-80);
+				left: rem(-22);
+				z-index: -1;
+			}
+		}
 	}
+	&__link{
+		font-weight: bold;
+		@extend .mono;
 
-	&__item {
-		display: inline-block;
-		list-style-type: none;
 	}
-
+	&__link--mail{
+		color: #ba2424;
+		text-transform: uppercase;
+	}
+	&__link--tel{
+		@extend .h3; 
+		color: #ffffff;
+	}
+ 
 	// 
 	@include media-breakpoint-up(xl) {}
 
@@ -60,7 +62,14 @@
 
 	@include media-breakpoint-down(md) {}
 
-	@include media-breakpoint-down(sm) {}
+	@include media-breakpoint-down(sm) {
 
-	@include media-breakpoint-down(xs) {}
+		text-align: center;
+		&__logo{
+			margin-bottom: 3rem;
+		}
+	}
+
+	@include media-breakpoint-down(xs) {
+	}
 }

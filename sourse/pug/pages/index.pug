@@ -3,19 +3,20 @@ extends layout/main.pug
 
 include ../blocks/sContent/_sContent.pug
 include ../blocks/sContact/_sContact.pug 
+include ../blocks/sServises/_sServises.pug 
 
 block variables
-	- let  mainPage= null
+	- let  mainPage= 'bg-black'
 block title
-	- let  title= 'title'
+	- let  title= 'Ярплэй групп'
 	title= title
 block pagecontent 
 	//- +mob-mnu()
 	+header()
 		+top-nav()
-		+topLine() 
-	+headerBlock()
+		//- +topLine() 
+	+sServises()
 	+sForm()
-	+sContact()
+	//- +sContact()
 	+footer()
 	

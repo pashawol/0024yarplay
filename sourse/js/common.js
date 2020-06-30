@@ -104,7 +104,7 @@ const JSCCommon = {
 	// /табы  
 	inputMask() {
 		// mask for input
-		$('input[type="tel"]').attr("pattern", "[+][0-9]{1}[(][0-9]{3}[)][0-9]{3}-[0-9]{2}-[0-9]{2}").inputmask("+9(999)999-99-99");
+		$('input[type="tel"]').attr("pattern", "[+][0-9]{1}[(][0-9]{3}[)][0-9]{3}-[0-9]{2}-[0-9]{2}").inputmask("+7(999)999-99-99");
 	}
 	// /inputMask
 
@@ -113,15 +113,15 @@ const JSCCommon = {
 function eventHandler() { 
 	JSCCommon.modalCall();
 
-	JSCCommon.tabscostume('tabs');
+	// JSCCommon.tabscostume('tabs');
 
-	JSCCommon.mobileMenu();
+	// JSCCommon.mobileMenu();
 
 	JSCCommon.inputMask();
 
 	// JSCCommon.CustomInputFile();
 	// добавляет подложку для pixel perfect
-	$(".main-wrapper").after('<div class="pixel-perfect" style="background-image: url(screen/main.jpg);"></div>')
+	// $(".main-wrapper").after('<div class="pixel-perfect" style="background-image: url(screen/main.jpg);"></div>')
 	// /добавляет подложку для pixel perfect
 
 
@@ -170,55 +170,14 @@ function eventHandler() {
 
 	heightses();
 
-	// листалка по стр
-	$(" .top-nav li a, .scroll-link").click(function () {
-		const elementClick = $(this).attr("href");
-		const destination = $(elementClick).offset().top;
-
-		$('html, body').animate({ scrollTop: destination }, 1100);
-
-		return false;
-	});
+ 
 
 	let defaultSl = {
 
 	}
-	const swiper4 = new Swiper('.color-slider', {
-		// slidesPerView: 5,
-		...defaultSl,
-		slidesPerView: 'auto',
-		watchOverflow: true,
-		spaceBetween: 0,
-		freeMode: true,
-		watchOverflow: true,
-		slidesPerGroup: 3,
-
-		// centeredSlides: true,
-		loop: true,
-		loopFillGroupWithBlank: true,
-		touchRatio: 0.2,
-		slideToClickedSlide: true,
-		freeModeMomentum: true,
-		navigation: {
-			nextEl: '.swiper-button-next',
-			prevEl: '.swiper-button-prev',
-		},
-
-	});
+ 
 	// modal window
-
-	var gets = (function () {
-		var a = window.location.search;
-		var b = new Object();
-		var c;
-		a = a.substring(1).split("&");
-		for (var i = 0; i < a.length; i++) {
-			c = a[i].split("=");
-			b[c[0]] = c[1];
-		}
-		return b;
-	})();
-	// form
+ 
 
 
 	var gets = (function () {
@@ -269,18 +228,7 @@ function eventHandler() {
 		$("body").prepend(`<p   class="browsehappy container">К сожалению, вы используете устаревший браузер. Пожалуйста, <a href="http://browsehappy.com/" target="_blank">обновите ваш браузер</a>, чтобы улучшить производительность, качество отображаемого материала и повысить безопасность.</p>`)
 
 	}
-
-	// First we get the viewport height and we multiple it by 1% to get a value for a vh unit
-	let vh = window.innerHeight * 0.01;
-	// Then we set the value in the --vh custom property to the root of the document
-	document.documentElement.style.setProperty('--vh', `${vh}px`);
-
-	// We listen to the resize event
-	window.addEventListener('resize', () => {
-		// We execute the same script as before
-		let vh = window.innerHeight * 0.01;
-		document.documentElement.style.setProperty('--vh', `${vh}px`);
-	});
+ 
 };
 if (document.readyState !== 'loading') {
 	eventHandler();

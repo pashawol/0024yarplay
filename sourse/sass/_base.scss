@@ -390,3 +390,19 @@ img.img-bg,
 iframe {
 	border: none;
 }
+
+.bg-black{
+	background-color: #000000;
+	color: #ffffff;
+}
+*{
+	letter-spacing: 0.2em;
+}
+p{
+	letter-spacing: 0.05em;
+
+}
+
+.btn{
+	@extend .mono;
+}
