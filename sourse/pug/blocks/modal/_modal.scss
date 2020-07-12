@@ -2,9 +2,13 @@
 	// display: block;
 	width: 100%;
 	position: relative;
+	max-width: 485px;
+	color: $body-color;
+	*{
+		color: $body-color;
 
+	}
 	.modal-content {
-		// max-width: 485px;
 		// padding-right: 40px 15px;
 	}
 
