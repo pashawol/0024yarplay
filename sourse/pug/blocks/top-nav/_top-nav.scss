@@ -4,6 +4,12 @@
 	.row{
 		align-items: center;
 	}
+
+	// cont
+	&__container{
+		position: relative;
+	}
+
 	&__logo{
 		a{
 			position: relative;
@@ -29,11 +35,72 @@
 		text-transform: uppercase;
 	}
 	&__link--tel{
-		@extend .h3; 
+		@extend .h3;
 		color: #ffffff;
+
+		@include media-breakpoint-down(xl){
+			font-size: rem(24);
+		}
 	}
- 
-	// 
+
+	//dt menu
+	&__desctop-mnu{
+		.menu{
+			list-style: none;
+			margin: 0;
+			display: flex;
+
+			padding: 0;
+			justify-content: space-around;
+			@include media-breakpoint-up(xxl){
+				padding: 0 0 0 84px;
+				justify-content: flex-start;
+			}
+
+			&-item{
+
+				@include media-breakpoint-up(xxl){
+					margin-right: rem(59);
+					&:last-child{
+						margin-right: 0;
+					}
+				}
+
+				a{
+					font-family: $mono;
+					font-weight: bold;
+					line-height: 1.6;
+
+					letter-spacing: .2em;
+					text-transform: uppercase;
+
+					color: $white;
+					@include mt();
+					&:hover{
+						color: $primary;
+					}
+
+				}
+			}
+		}
+	}
+
+	//mob mnu
+	&__mob-mnu-col{
+		/*position: absolute;
+		top: 0;
+		right: 0;
+		width: 62px;
+		height: 71px;
+
+
+		& > .toggle-menu-mobile{
+			height: 100%;
+		}*/
+
+	}
+
+
 	@include media-breakpoint-up(xl) {}
 
 	@include media-breakpoint-up(lg) {}
@@ -58,7 +125,7 @@
 
 	@include media-breakpoint-only(xl) {}
 
-	// 
+	//
 	@include media-breakpoint-down(xl) {}
 
 	@include media-breakpoint-down(lg) {}
@@ -66,10 +133,8 @@
 	@include media-breakpoint-down(md) {}
 
 	@include media-breakpoint-down(sm) {
-
-		text-align: center;
-		&__logo{
-			margin-bottom: 3rem;
+		&__contacts-col{
+			padding-top: 3rem;
 		}
 	}
 

@@ -3,7 +3,12 @@ extends layout/main.pug
 
 include ../blocks/sContent/_sContent.pug
 include ../blocks/sContact/_sContact.pug 
-include ../blocks/sServises/_sServises.pug 
+include ../blocks/sServises/_sServises.pug
+include ../blocks/sTopCards/_sTopCards.pug
+include ../blocks/sAbout/_sAbout.pug
+include ../blocks/sCases/_sCases.pug
+include ../blocks/sFormAlt/_sFormAlt.pug
+include ../blocks/sTeam/_sTeam.pug
 
 block variables
 	- let  mainPage= 'bg-black'
@@ -14,9 +19,16 @@ block pagecontent
 	//- +mob-mnu()
 	+header()
 		+top-nav()
-		//- +topLine() 
-	+sServises()
-	+sForm()
-	//- +sContact()
+			+e.desctop-mnu
+				+mnu()
+		//- +topLine()
+	+sTopCards()
+	+sAbout()
+	+sCases()
+	+sFormAlt()
+	+sTeam()
+	//-+sServises()
+	//+sForm()
+	//-+sContact()
 	+footer()
 	

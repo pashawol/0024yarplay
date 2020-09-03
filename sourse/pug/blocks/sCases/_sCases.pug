@@ -1,0 +1,194 @@
+mixin sCases()
+	// start sCases
+	+b.SECTION.sCases.section#sCases&attributes(attributes)
+		+e.container.container
+			+e.header
+				h2 Кейсы
+				+e.A.watch-all(href='#')
+					span Смотреть все
+					+icon('chevron-right')
+				+e.slider-nav
+					+e.prev.cases-prev-js
+						+icon('arrow-left')
+					+e.next.cases-next-js
+						+icon('arrow-right')
+			+e.slider
+				.swiper-container.cases-slider-js
+					.swiper-wrapper
+						//-1
+						+casesSlide(1)
+							+casesSlideTopLine([1])
+								| РОЖДЕСТВЕННСКИЕ ПРИКЛЮЧЕНИЯ НА&nbsp;ЯРМАРКЕ СКАЗОК В&nbsp;ЦЕНТРЕ ПРОГРЕММА БОКСА
+							+e.lower-txt
+								+e.top-content
+									+e.title
+										| Городское Новогоднее благотворительное
+										|
+										br
+										| мероприятие г. Москва
+									+e.list
+										ul
+											li 350 000 гостей
+											li 200 000 новогодних подарков
+											li 12 представителей СМИ
+								+casesSlideFooter('28.12.2019 - 8.01.2020', 'Организатор')
+						//-2
+						+casesSlide(2)
+							+casesSlideTopLine([2])
+								| Послание Президента
+								|
+								br
+								| РФ Федеральному
+								|
+								br
+								| собранию
+							+e.lower-txt
+								+e.top-content
+									+e.title Место проведения: ЦВЗ «Манеж» г. Москва
+									+e.list
+										ul
+											li Более 1500 участников
+											li Более 800 представителей СМИ
+								+casesSlideFooter('15.01.2020', 'Техническая дирекция')
+						//-3
+						+casesSlide(3)
+							+casesSlideTopLine([3])
+								| Благотворительный фестиваль «Карусель
+								|
+								br
+								| истории» в Центре
+								|
+								br
+								| Прогресса Бокса
+							+e.lower-txt
+								+e.top-content
+									+e.title Ежегодное благотворительное мероприятие
+									+e.list
+										ul
+											li 15 000 гостей
+											li 12 представителей СМИ
+								+casesSlideFooter('28.12.2019 - 8.01.2020', 'Организатор')
+						//-4
+						+casesSlide(4)
+							+casesSlideTopLine([4])
+								| Non/fiction №21
+								|
+								br
+								| Ярмарка интеллектуальной
+								|
+								br
+								| литературы в Москве
+							+e.lower-txt
+								+e.top-content
+									+e.title Гостиный двор г. Москва
+									+e.list
+										ul
+											li 29 стран-участниц
+											li 30 000 участников
+								+casesSlideFooter('22.12.2019 - 25.12.2019', 'Подрядчик')
+						//-5
+						+casesSlide(5)
+							+casesSlideTopLine([5])
+								| Городской
+								|
+								br
+								| праздник в честь
+								|
+								br
+								| 9 мая
+							+e.lower-txt
+								+e.top-content
+									+e.title Центр Прогресса Бокса г. Москва
+									+e.list
+										ul
+											li 3 500 участников за 2 дня
+											li Строительство игровых площадок и точек питания
+								+casesSlideFooter('8 - 9 мая 2019 г.', 'Организатор')
+						//-6
+						+casesSlide(6)
+							+casesSlideTopLine(['6-1', '6-2', '6-3'])
+								| DME:
+								|
+								br
+								| SWAT Challenge
+								|
+								br
+								| Security Camp
+								|
+								br
+								| Приток Camp
+							+e.lower-txt
+								+e.top-content
+									+e.title Ежегодное мероприятие для службы безопасности аэропорта Домодедово. Проводится с 2017 года по настоящее время
+									+e.list
+										ul
+											li Курс учебных миссий на базе пейнтбола (6 дней)
+											li 245 единиц пейнтбольного оборудования - электронные
+											li Взаимодействие с военными советниками
+							+casesSlideFooter('с 2017 года', 'Техническая дирекция')
+						//-7
+						+casesSlide(7)
+							+casesSlideTopLine([7])
+								| Кубок Москвы
+								|
+								br
+								| по пейнтболу
+								|
+								br
+								| 2019
+							+e.lower-txt
+								+e.top-content
+									+e.title Спортивный турнир высокого уровня
+									+e.list
+										ul
+											li 90 команд из 8-ми регионов России в 4-х дивизионах
+											li Вся инфраструктура создана на месте
+								+casesSlideFooter('28.12.2019 - 8.01.2020', 'Соорганизатор')
+						//-8
+						+casesSlide(8)
+							+casesSlideTopLine([8])
+								| Первый в России
+								|
+								br
+								| и мире турнир
+								|
+								br
+								| Battle Arena
+							+e.lower-txt
+								+e.top-content
+									+e.title ЦВЗ «Манеж» г. Москва
+									+e.list
+										ul
+											li Уникальный формат
+											li Специально организованные площадки
+											li Запись и трансляция с нашлемных камер
+											li Комментирование в прямом эфире
+								+casesSlideFooter('15.01.2020', 'Соорганизатор')
+				+e.pugin.cases-pugin-js
+	// end sCases
+
+mixin casesSlide(imgNum, logoArr)
+	.swiper-slide
+		+e.slide-content
+			+e.bg
+				img.swiper-lazy(src="#" data-src=`img/@2x/cases-slide-${imgNum}.jpg` alt="")
+			+e.inner
+				block
+
+mixin casesSlideTopLine(logoArr)
+	+e.top-line
+		+e.logoes-cont
+			each item in logoArr
+				+e.logo
+					img.swiper-lazy(src="" data-src=`img/@2x/cases-logo-${item}.png` alt="")
+		+e.headline
+			block
+
+mixin casesSlideFooter(date, role)
+	+e.footer
+		+e.date
+			span Период проведения:
+			span=date
+		+e.role
+			span Роль:
+			span=role

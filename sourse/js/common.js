@@ -115,13 +115,13 @@ function eventHandler() {
 
 	// JSCCommon.tabscostume('tabs');
 
-	// JSCCommon.mobileMenu();
+	JSCCommon.mobileMenu();
 
 	JSCCommon.inputMask();
 
 	// JSCCommon.CustomInputFile();
 	// добавляет подложку для pixel perfect
-	// $(".main-wrapper").after('<div class="pixel-perfect" style="background-image: url(screen/main.jpg);"></div>')
+	$(".main-wrapper").after('<div class="pixel-perfect" style="background-image: url(screen/home.png);"></div>')
 	// /добавляет подложку для pixel perfect
 
 
@@ -228,7 +228,88 @@ function eventHandler() {
 		$("body").prepend(`<p   class="browsehappy container">К сожалению, вы используете устаревший браузер. Пожалуйста, <a href="http://browsehappy.com/" target="_blank">обновите ваш браузер</a>, чтобы улучшить производительность, качество отображаемого материала и повысить безопасность.</p>`)
 
 	}
- 
+
+	//luckyoneJs
+
+	//shape js
+
+	let oldShape = {};
+	function DrawShape() {
+		//trap === trapezoid shape
+		let trap = document.querySelector('.trapezoid-bg-js');
+		if (!trap) return
+
+		let col = trap.parentElement;
+		let colWidth = col.offsetWidth;
+		let colHeight = col.offsetHeight;
+
+		if (oldShape.shapeHeight === colHeight && oldShape.shapeWidth === colWidth){
+			//console.log('nothing changes');
+			return
+		}
+		else{
+			trap.style.borderBottom = `${colHeight}px solid #2D2D2D`;
+			trap.style.borderRight = `${colWidth * 0.2378}px solid transparent`; //- 176/739.5=0.2378
+			trap.style.width = `${colWidth}px`;
+
+			oldShape.shapeHeight = colHeight;
+			oldShape.shapeWidth = colWidth;
+		}
+	}
+	window.addEventListener('resize', DrawShape, {passive: true});
+	window.setTimeout(DrawShape, 300);
+
+	//cases slider
+	let casesSlider =  new Swiper('.cases-slider-js', {
+		slidesPerView: 'auto',
+		loop: true,
+
+		//lazy
+		lazy: {
+			loadPrevNext: true,
+			loadPrevNextAmount: 10,
+		},
+		//
+		breakpoints: {
+			996 : {
+				spaceBetween: 35,
+			},
+			0 : {
+				spaceBetween: 20,
+			},
+		},
+		//pugin
+		pagination: {
+			el: $(this).find('.cases-pugin-js'),
+			clickable: true,
+		},
+	});
+
+	//prev,next
+	$('.cases-prev-js').click(function (){
+		casesSlider.slidePrev();
+	});
+	$('.cases-next-js').click(function (){
+		casesSlider.slideNext();
+	});
+
+	//partners slider
+
+	let partnersSlider = new Swiper('.partners-slider-js', {
+		slidesPerView: 'auto',
+		spaceBetween: 30,
+
+		//lazy
+		lazy: {
+			loadPrevNext: true,
+			loadPrevNextAmount: 12,
+		},
+	});
+
+
+	//end luckyoneJs
+
+
 };
 if (document.readyState !== 'loading') {
 	eventHandler();

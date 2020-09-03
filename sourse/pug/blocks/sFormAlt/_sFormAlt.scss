@@ -1,0 +1,274 @@
+// start .sFormAlt
+.sFormAlt {
+	--sTPB: #{0};
+
+	--sPT: #{rem(30)};
+	--sPB: #{rem(30px)};
+	@include media-breakpoint-up(sm){
+		--sPT: #{rem(60)};
+		--sPB: #{rem(30px)};
+	}
+	@include media-breakpoint-up(lg){
+		--sPT: #{rem(122)};
+		--sPB: #{rem(60px)};
+	}
+
+	&__container{
+		@include media-breakpoint-down(sm){
+			padding: 0;
+		}
+		@include media-breakpoint-up(xxl){
+			padding-right: 8px;
+		}
+	}
+	position: relative;
+	z-index: 1;
+	&__bg{
+		position: absolute;
+		z-index: -1;
+		top: 0;
+		right: 0;
+		img{
+			max-width: 90vw;
+			@include media-breakpoint-up(xxl){
+				max-width: 100vw;
+			}
+		}
+	}
+	.form-wrap{
+		//background-color: $white;
+		form{
+			position: relative;
+			@include media-breakpoint-up(xl){
+				display: flex;
+				width: 100%;
+			}
+		}
+		//man
+		&__man{
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			@include media-breakpoint-up(xl){
+				position: relative;
+			}
+			width: 90px;
+			@include media-breakpoint-up(xxl){
+				width: rem(188px);
+			}
+			flex-shrink: 0;
+			img{
+				position: absolute;
+				z-index: 2;
+				bottom: -1px;
+				left: 100%;
+
+				transform: translateX(-45%);
+				max-height: 450px;
+				@include media-breakpoint-up(xl){
+					transform: translateX(-42.5%);
+					max-height: 510px;
+				}
+				@include media-breakpoint-up(xxl){
+					transform: translateX(-48.5%);
+					max-height: 563px;
+				}
+
+				height: auto;
+				width: auto;
+			}
+		}
+		&__form-content{
+			flex-grow: 1;
+			flex-shrink: 0;
+			background-color: $white;
+			position: relative;
+			z-index: 1;
+			overflow: hidden;
+
+			padding: rem(30) 15px rem(30) 15px;
+			@include media-breakpoint-up(sm){
+				padding: rem(30) rem(20) rem(50) rem(20);
+			}
+			@include media-breakpoint-up(md){
+				padding: rem(60) rem(40) rem(90) rem(40);
+			}
+			@include media-breakpoint-up(xl){
+				display: flex;
+				justify-content: flex-end;
+			}
+			@include media-breakpoint-up(xxl){
+				padding: rem(66) rem(75) rem(72) rem(75);
+			}
+		}
+		&__bg{
+			position: absolute;
+			z-index: -1;
+
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			img{
+				width: auto;
+				height: auto;
+			}
+
+			&:after{
+				@include media-breakpoint-up(md){
+					content: '';
+				}
+				position: absolute;
+				z-index: 0;
+
+				left: rem(-192px);
+				bottom: rem(-400px);
+				@include media-breakpoint-up(xl){
+					left: rem(-192px);
+					top: 380px;
+					bottom: unset;
+				}
+				@include media-breakpoint-up(xxl){
+					top: rem(396px);
+				}
+				width: rem(540px);
+				height: rem(540px);
+				border-radius: 50%;
+				background-color: $red;
+
+			}
+		}
+		//txt
+		&__txt-block{
+			margin-bottom: rem(30);
+			@include media-breakpoint-up(xl){
+				width: rem(460);
+				margin-right: rem(30px);
+				margin-bottom: 0;
+			}
+			@include media-breakpoint-up(xxl){
+				margin-right: rem(92px);
+			}
+		}
+		&__questions{
+			color: $black;
+			font-family: $mono;
+			font-weight: bold;
+
+			letter-spacing: 0.2em;
+			text-transform: uppercase;
+
+			font-size: 25px;
+			margin-bottom: rem(15);
+			@include media-breakpoint-up(sm){
+				font-size: rem(40px);
+				margin-bottom: rem(20);
+			}
+			@include media-breakpoint-up(xl){
+				margin-bottom: rem(44);
+			}
+		}
+		&__small{
+			line-height: 1.8;
+			letter-spacing: 0.05em;
+			color: $secondary;
+		}
+		//
+		&__inputs-block{
+			@include media-breakpoint-up(md){
+				width: 62%;
+			}
+			@include media-breakpoint-up(lg){
+				width: 50%;
+			}
+
+			margin-left: auto;
+			@include media-breakpoint-up(xl){
+				margin-left: 0;
+				width: rem(400px);
+			}
+			@include media-breakpoint-up(xxl){
+				padding-top: rem(12);
+				width: rem(407px);
+			}
+		}
+		&__input-wrap{
+			margin-bottom: rem(24);
+		}
+		&__title{
+			letter-spacing: normal;
+			font-size: 14px;
+			line-height: (18/14);
+			color: rgba($black, .8);
+		}
+		&__input{
+			letter-spacing: normal;
+			font-family: $default-font;
+			font-size: rem(20px);
+			line-height: (28/20);
+
+			color: rgba($black, .8);
+		}
+		&__send-btn{
+			@extend .btn;
+			@extend .btn-primary;
+			width: 100%;
+			padding: rem(23);
+			margin-bottom: rem(19);
+		}
+		&__polite{
+			text-align: center;
+			@include media-breakpoint-up(md){
+				text-align: left;
+			}
+			font-size: 12px;
+			line-height: 1.8;
+
+			color: $secondary;
+
+			span{
+				letter-spacing: 0.05em;
+			}
+			a{
+				letter-spacing: 0.05em;
+				color: $secondary !important;
+				text-decoration: underline;
+			}
+
+			&:hover{
+				text-decoration: none;
+			}
+		}
+	}
+	&__{}
+	&__{}
+	&__{}
+	&__{}
+	&__{}
+	&__{}
+
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-up(xs) {}
+	
+	//
+	@include media-breakpoint-between(md, xl) { }
+	
+	
+	//
+	@include media-breakpoint-only(xs) {}
+	@include media-breakpoint-only(sm) {}
+	@include media-breakpoint-only(md) {}
+	@include media-breakpoint-only(lg) {}
+	@include media-breakpoint-only(xl) {}
+	
+	//
+	@include media-breakpoint-down(xl) {}
+	@include media-breakpoint-down(lg) {}
+	@include media-breakpoint-down(md) {}
+	@include media-breakpoint-down(sm) {}
+	@include media-breakpoint-down(xs) {} 
+
+} // end.sFormAlt

@@ -19,6 +19,7 @@
 		<meta property="og:image:height" content="504">
 		<!-- Custom Browsers Color-->
 		<meta name="theme-color" content="#3361d8">
+		<link rel="stylesheet" href="libs/swiper/css/swiper.min.css"/>
 		<link rel="stylesheet" href="libs/@fancyapps/fancybox/jquery.fancybox.min.css"/>
 		<link rel="stylesheet" href="css/main.min.css"/>
 	</head>
@@ -28,14 +29,43 @@
 			<header class="header" id="header">
 				<!-- start top-nav-->
 				<div class="top-nav block-with-lazy">
-					<div class="container">
+					<div class="top-nav__container container">
 						<div class="row">
 							<div class="col-lg-auto col">
 								<div class="top-nav__logo"><a href="/"><img src="img/logo.svg" alt=""/></a>
 								</div>
 							</div>
-							<div class="col d-none d-lg-block"></div>
-							<div class="col-sm-auto text-sm-right"><a class="top-nav__link top-nav__link--tel" href="tel:8499490-33-24">8 499 490-33-24</a><br/><a class="top-nav__link top-nav__link--mail" href="mailto:info@yarplay.ru">info@yarplay.ru</a>
+							<div class="col d-none d-lg-block">
+								<div class="top-nav__desctop-mnu">
+									<ul class="menu" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
+										<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Услуги</a></li>
+										<li class="menu-item" itemprop="item"><a href="#" itemprop="url">О компании</a></li>
+										<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Кейсы</a></li>
+										<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Контакты</a></li>
+									</ul>
+								</div>
+							</div>
+							<div class="top-nav__contacts-col col-sm-auto text-sm-right order-sm-0 order-last"><a class="top-nav__link top-nav__link--tel" href="tel:8499490-33-24">8 499 490-33-24</a><br/><a class="top-nav__link top-nav__link--mail" href="mailto:info@yarplay.ru">info@yarplay.ru</a>
+							</div>
+							<div class="top-nav__mob-mnu-col col-auto d-block d-lg-none">
+								<div class="toggle-menu-mobile toggle-menu-mobile--js d-lg-none"><span></span>
+								</div>
+								<div class="menu-mobile menu-mobile--js d-lg-none">
+									<div class="toggle-menu-mobile toggle-menu-mobile--js"><span></span>
+									</div>
+									<div class="menu-mobile__inner">
+										<div class="menu-mobile__logo"><a href="/"><img src="img/logo.svg" alt=""/></a>
+										</div>
+										<ul class="menu" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
+											<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Услуги</a></li>
+											<li class="menu-item" itemprop="item"><a href="#" itemprop="url">О компании</a></li>
+											<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Кейсы</a></li>
+											<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Контакты</a></li>
+										</ul>
+										<div class="text-right"></div>
+									</div>
+								</div>
+								<!--  мобильное меню-->
 							</div>
 						</div>
 					</div>
@@ -43,74 +73,604 @@
 				<!-- end top-nav-->
 			</header>
 			<!-- end header-->
-			<!-- start sServises-->
-			<section class="sServises pt-0 section" id="sServises">
-				<div class="container"> 
-					<div class="row">
-								<div class="sServises__col col-lg-6">
-									<div class="sServises__item" style="background-image: url(img/@2x/servises-bg-1.jpg);">
-										<h5>ТИМБИЛДИНГ</h5>
-										<p>Давно выяснено, что при оценке дизайна и&nbsp;композиции читаемый текст мешает сосредоточиться. Lorem Ipsum используют потому, что тот</p><a class="sServises__link-more" href="#">Подробнее
-										<svg class="icon icon-chevron-down ">
-											<use xlink:href="img/svg/sprite.svg#chevron-down"></use>
-										</svg></a><img src="img/@2x/servises-img-1.png" alt=""/>
-									</div>
+			<!-- start sTopCards-->
+			<div class="sTopCards section" id="sTopCards">
+				<div class="container">
+					<div class="sTopCards__row row">
+						<div class="sTopCards__col col-xl-6">
+							<div class="sTopCards__card-cont">
+								<div class="sTopCards__bg-cont">
+									<!-- picture-->
+									<picture class="sTopCards__bg"> 
+										<source srcset="img/@2x/webp/top-card-1.webp" type="image/webp" media="(min-width:576px)"/>
+										<source srcset="img/@1x/webp/top-card-1.webp" type="image/webp"/>
+										<source srcset="img/@2x/top-card-1.jpg" type="image/jpg" media="(min-width:576px)"/>
+										<source srcset="img/@1x/top-card-1.jpg" type="image/jpg"/><img src="img/@2x/top-card-1.jpg" alt=""/>
+									</picture>
+									<!-- /picture-->
 								</div>
-								<div class="sServises__col col-lg-6">
-									<div class="sServises__item">
-										<h5>Бизнес мероприятия</h5>
-										<p>Давно выяснено, что при оценке дизайна и&nbsp;композиции читаемый текст мешает сосредоточиться. Lorem Ipsum используют потому, что тот</p><a class="sServises__link-more" href="#">Подробнее
-										<svg class="icon icon-chevron-down ">
-											<use xlink:href="img/svg/sprite.svg#chevron-down"></use>
-										</svg></a><img src="img/@2x/servises-img-2.png" alt=""/>
-									</div>
+								<div class="sTopCards__txt">
+									<h5>Спортивные<br/>мероприятия</h5>
+									<p>
+										Организуем все виды спортивных мероприятий. Работаем с
+										проектами независимо от&nbsp;их&nbsp;масштаба. Поможем, подскажем, подберем формат под задачи&nbsp;и бюджет
+									</p><a class="sTopCards__detail-link" href="#">
+									<div class="txt">Подробнее</div>
+									<svg class="icon icon-chevron-down ">
+										<use xlink:href="img/svg/sprite.svg#chevron-down"></use>
+									</svg></a>
 								</div>
-								<div class="sServises__col col-lg-6">
-									<div class="sServises__item" style="background-image: url(img/@2x/servises-bg-4.jpg);">
-										<h5>Массовые мероприятия </h5>
-										<p>Давно выяснено, что при оценке дизайна и&nbsp;композиции читаемый текст мешает сосредоточиться. Lorem Ipsum используют потому, что тот</p><a class="sServises__link-more" href="#">Подробнее
-										<svg class="icon icon-chevron-down ">
-											<use xlink:href="img/svg/sprite.svg#chevron-down"></use>
-										</svg></a><img src="img/@2x/servises-img-4.png" alt=""/>
-									</div>
+								<div class="sTopCards__pic-cont d-none d-sm-block">
+									<!-- picture-->
+									<picture class="sTopCards__picture"> 
+										<source srcset="img/@2x/webp/top-card-1.webp" type="image/webp" media="(min-width:576px)"/>
+										<source srcset="img/@1x/webp/top-card-1.webp" type="image/webp"/>
+										<source srcset="img/@2x/top-card-1.jpg" type="image/jpg" media="(min-width:576px)"/>
+										<source srcset="img/@1x/top-card-1.jpg" type="image/jpg"/><img src="img/@2x/top-card-1.jpg" alt=""/>
+									</picture>
+									<!-- /picture-->
 								</div>
-								<div class="sServises__col col-lg-6">
-									<div class="sServises__item">
-										<h5>Корпоративные мероприятия</h5>
-										<p>Давно выяснено, что при оценке дизайна и&nbsp;композиции читаемый текст мешает сосредоточиться. Lorem Ipsum используют потому, что тот</p><a class="sServises__link-more" href="#">Подробнее
-										<svg class="icon icon-chevron-down ">
-											<use xlink:href="img/svg/sprite.svg#chevron-down"></use>
-										</svg></a><img src="img/@2x/servises-img-3.png" alt=""/>
-									</div>
+							</div>
+						</div>
+						<div class="sTopCards__col col-xl-6">
+							<div class="sTopCards__card-cont">
+								<div class="sTopCards__bg-cont">
+									<!-- picture-->
+									<picture class="sTopCards__bg"> 
+										<source srcset="img/@2x/webp/top-card-2.webp" type="image/webp" media="(min-width:576px)"/>
+										<source srcset="img/@1x/webp/top-card-2.webp" type="image/webp"/>
+										<source srcset="img/@2x/top-card-2.jpg" type="image/jpg" media="(min-width:576px)"/>
+										<source srcset="img/@1x/top-card-2.jpg" type="image/jpg"/><img src="img/@2x/top-card-2.jpg" alt=""/>
+									</picture>
+									<!-- /picture-->
 								</div>
+								<div class="sTopCards__txt">
+									<h5>Частные мероприятия и&nbsp;праздники</h5>
+									<p>Воплощаем самые неординарные идеи создавая яркие<br/>события и&nbsp;приятные эмоции.</p><a class="sTopCards__detail-link" href="#">
+									<div class="txt">Подробнее</div>
+									<svg class="icon icon-chevron-down ">
+										<use xlink:href="img/svg/sprite.svg#chevron-down"></use>
+									</svg></a>
+								</div>
+								<div class="sTopCards__pic-cont d-none d-sm-block">
+									<!-- picture-->
+									<picture class="sTopCards__picture"> 
+										<source srcset="img/@2x/webp/top-card-2.webp" type="image/webp" media="(min-width:576px)"/>
+										<source srcset="img/@1x/webp/top-card-2.webp" type="image/webp"/>
+										<source srcset="img/@2x/top-card-2.jpg" type="image/jpg" media="(min-width:576px)"/>
+										<source srcset="img/@1x/top-card-2.jpg" type="image/jpg"/><img src="img/@2x/top-card-2.jpg" alt=""/>
+									</picture>
+									<!-- /picture-->
+								</div>
+							</div>
+						</div>
+						<div class="sTopCards__col col-xl-6">
+							<div class="sTopCards__card-cont">
+								<div class="sTopCards__bg-cont">
+									<!-- picture-->
+									<picture class="sTopCards__bg"> 
+										<source srcset="img/@2x/webp/top-card-3.webp" type="image/webp" media="(min-width:576px)"/>
+										<source srcset="img/@1x/webp/top-card-3.webp" type="image/webp"/>
+										<source srcset="img/@2x/top-card-3.jpg" type="image/jpg" media="(min-width:576px)"/>
+										<source srcset="img/@1x/top-card-3.jpg" type="image/jpg"/><img src="img/@2x/top-card-3.jpg" alt=""/>
+									</picture>
+									<!-- /picture-->
+								</div>
+								<div class="sTopCards__txt">
+									<h5>Корпоративные<br/>мероприятия</h5>
+									<p>Многолетний опыт работы позволяет нам воплощать проекты любого формата на&nbsp;высоком уровне.</p><a class="sTopCards__detail-link" href="#">
+									<div class="txt">Подробнее</div>
+									<svg class="icon icon-chevron-down ">
+										<use xlink:href="img/svg/sprite.svg#chevron-down"></use>
+									</svg></a>
+								</div>
+								<div class="sTopCards__pic-cont d-none d-sm-block">
+									<!-- picture-->
+									<picture class="sTopCards__picture"> 
+										<source srcset="img/@2x/webp/top-card-3.webp" type="image/webp" media="(min-width:576px)"/>
+										<source srcset="img/@1x/webp/top-card-3.webp" type="image/webp"/>
+										<source srcset="img/@2x/top-card-3.jpg" type="image/jpg" media="(min-width:576px)"/>
+										<source srcset="img/@1x/top-card-3.jpg" type="image/jpg"/><img src="img/@2x/top-card-3.jpg" alt=""/>
+									</picture>
+									<!-- /picture-->
+								</div>
+							</div>
+						</div>
+						<div class="sTopCards__col col-xl-6">
+							<div class="sTopCards__card-cont">
+								<div class="sTopCards__bg-cont">
+									<!-- picture-->
+									<picture class="sTopCards__bg"> 
+										<source srcset="img/@2x/webp/top-card-4.webp" type="image/webp" media="(min-width:576px)"/>
+										<source srcset="img/@1x/webp/top-card-4.webp" type="image/webp"/>
+										<source srcset="img/@2x/top-card-4.jpg" type="image/jpg" media="(min-width:576px)"/>
+										<source srcset="img/@1x/top-card-4.jpg" type="image/jpg"/><img src="img/@2x/top-card-4.jpg" alt=""/>
+									</picture>
+									<!-- /picture-->
+								</div>
+								<div class="sTopCards__txt">
+									<h5>Массовые<br/>мероприятия</h5>
+									<p>Осуществляем комплексное сопровождение всех проектов, в&nbsp;основе<br/>которого оптимизация расходов наших клиентов.</p><a class="sTopCards__detail-link" href="#">
+									<div class="txt">Подробнее</div>
+									<svg class="icon icon-chevron-down ">
+										<use xlink:href="img/svg/sprite.svg#chevron-down"></use>
+									</svg></a>
+								</div>
+								<div class="sTopCards__pic-cont d-none d-sm-block">
+									<!-- picture-->
+									<picture class="sTopCards__picture"> 
+										<source srcset="img/@2x/webp/top-card-4.webp" type="image/webp" media="(min-width:576px)"/>
+										<source srcset="img/@1x/webp/top-card-4.webp" type="image/webp"/>
+										<source srcset="img/@2x/top-card-4.jpg" type="image/jpg" media="(min-width:576px)"/>
+										<source srcset="img/@1x/top-card-4.jpg" type="image/jpg"/><img src="img/@2x/top-card-4.jpg" alt=""/>
+									</picture>
+									<!-- /picture-->
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- end sTopCards-->
+			<!-- start sAbout-->
+			<section class="sAbout section" id="sAbout">
+				<div class="sAbout__red-block">
+				</div>
+				<div class="sAbout__left-rain"><img loading="lazy" src="img/svg/sAbout-left-rain.svg" alt=""/>
+				</div>
+				<div class="sAbout__right-rain"><img loading="lazy" src="img/svg/sAbout-right-rain.svg" alt=""/>
+				</div>
+				<div class="container">
+					<div class="sAbout__row row">
+						<div class="sAbout__descr-col col-lg-7">
+							<div class="sAbout__txt-cont">
+								<div class="sAbout__left-col-bg"><img loading="lazy" src="img/@2x/sAbout-left-col-bg.jpg" alt=""/>
+								</div>
+								<div class="sAbout__company-descr">
+									<h2>О компании</h2>
+									<p>
+										ЯRPLAY&nbsp;- это команда людей, которые знают и&nbsp;любят свою работу.
+										<br/>Мы&nbsp;знаем, что такое &laquo;гибкость&raquo; и&nbsp;&laquo;прозрачность&raquo;, работаем с&nbsp;проектами независимо от&nbsp;их&nbsp;бюджета. Мы&nbsp;добивается максимально высокого уровня организации и&nbsp;проведения как корпоративных тимбилдингов, так и&nbsp;самых знаковых мероприятий городского и&nbsp;Федерального масштаба!
+									</p>
+								</div>
+								<div class="sAbout__list-bl">
+									<div class="sAbout__list-title">Сегодня ЯRPLAY – это:
+									</div>
+									<ul>
+										<li>300+ сотрудников</li>
+										<li>100+ реализованных проектов</li>
+										<li>7&nbsp;направлений деятельности</li>
+										<li>собственные производственные площади</li>
+										<li>материально-техническая база современного оборудования для организации и&nbsp;проведения мероприятий любого масштаба на&nbsp;территории России и&nbsp;СНГ</li>
+									</ul>
+								</div><a class="sAbout__video-link" href="#"><span>Смотреть видео</span><span>о компании</span></a>
+							</div>
+						</div>
+						<div class="sAbout__president-col col-lg-5">
+							<div class="sAbout__right-col-content">
+								<div class="sAbout__trapezoid-bg trapezoid-bg-js">
+								</div>
+								<div class="sAbout__pres-title">
+									<h4>Обращение президента компании</h4>
+									<p>А.Н. Ткачук</p>
+								</div>
+								<div class="sAbout__pres-descr">
+									<p>Группа компаний ЯРПЛЕЙ&nbsp;&mdash; создаем условия для успешного мероприятия.<br/>Команда работающая&nbsp;на результат. Придумаем концепцию, разработаем, построим и&nbsp;проведем мероприятие для вас и ваших&nbsp;гостей в&nbsp;Москве и&nbsp;РФ.</p>
+								</div>
+								<div class="sAbout__pres-portrait"><img loading="lazy" src="img/@2x/president.png" alt=""/>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="sAbout__convince-row row">
+						<div class="col-lg-4 col-sm-6">
+							<div class="sAbout__convince-txt">
+								Понимание особенностей и
+								<br/>индивидуальный подход к
+								<br/>каждому клиенту
+							</div>
+						</div>
+						<div class="col-lg-4 col-sm-6">
+							<div class="sAbout__convince-txt">
+								Доступность 24/7 для решения
+								<br/>любых вопросов
+							</div>
+						</div>
+						<div class="col-lg-4 col-sm-6">
+							<div class="sAbout__convince-txt">Реализация любых потребностей заказчика, гибкость и&nbsp;оперативность в&nbsp;решении сложных вопросов
+							</div>
+						</div>
+						<div class="col-lg-4 col-sm-6">
+							<div class="sAbout__convince-txt">
+								Детальная проработка и
+								<br/>составления программ
+								<br/>любой сложности
+							</div>
+						</div>
+						<div class="col-lg-4 col-sm-6">
+							<div class="sAbout__convince-txt">
+								Наличие своей технической базы:
+								<br/>световое и&nbsp;звуковое оборудование,
+								<br/>мебель, экипировка и&nbsp;т.д.
+							</div>
+						</div>
+						<div class="col-lg-4 col-sm-6">
+							<div class="sAbout__convince-txt">Работа без подрядчиков, экономия Вашего бюджета, предоставление детальной сметы и&nbsp;документации по&nbsp;проекту
+							</div>
+						</div>
 					</div>
 				</div>
 			</section>
-			<!-- end sServises-->
-			<!-- start sForm-->
-			<section class="sForm section" id="sForm">
-				<div class="container">
-					<div class="form-wrap">
-						<div class="form-wrap__man-wrap">
+			<!-- end sAbout-->
+			<!-- start sCases-->
+			<section class="sCases section" id="sCases">
+				<div class="sCases__container container">
+					<div class="sCases__header">
+						<h2>Кейсы</h2><a class="sCases__watch-all" href="#"><span>Смотреть все</span>
+						<svg class="icon icon-chevron-right ">
+							<use xlink:href="img/svg/sprite.svg#chevron-right"></use>
+						</svg></a>
+						<div class="sCases__slider-nav">
+							<div class="sCases__prev cases-prev-js">
+								<svg class="icon icon-arrow-left ">
+									<use xlink:href="img/svg/sprite.svg#arrow-left"></use>
+								</svg>
+							</div>
+							<div class="sCases__next cases-next-js">
+								<svg class="icon icon-arrow-right ">
+									<use xlink:href="img/svg/sprite.svg#arrow-right"></use>
+								</svg>
+							</div>
 						</div>
-						<div class="form-wrap__wrapper">
-						</div>
-						<div class="row">
-							<div class="col-xl-auto">
-								<div class="form-wrap__caption">
-									<h2>Есть вопросы или хотите организовать мероприятие? <span class="text-primary">Напишите нам!</span></h2>
-									<p>Наши менеджеры сориентируют Вам по&nbsp;услугам и&nbsp;ценам в&nbsp;течении 20&nbsp;минут</p>
+					</div>
+					<div class="sCases__slider">
+						<div class="swiper-container cases-slider-js">
+							<div class="swiper-wrapper">
+								<div class="swiper-slide">
+									<div class="sCases__slide-content">
+										<div class="sCases__bg"><img class="swiper-lazy" src="#" data-src="img/@2x/cases-slide-1.jpg" alt=""/>
+										</div>
+										<div class="sCases__inner">
+											<div class="sCases__top-line">
+												<div class="sCases__logoes-cont">
+													<div class="sCases__logo"><img class="swiper-lazy" src="" data-src="img/@2x/cases-logo-1.png" alt=""/>
+													</div>
+												</div>
+												<div class="sCases__headline">РОЖДЕСТВЕННСКИЕ ПРИКЛЮЧЕНИЯ НА&nbsp;ЯРМАРКЕ СКАЗОК В&nbsp;ЦЕНТРЕ ПРОГРЕММА БОКСА
+												</div>
+											</div>
+											<div class="sCases__lower-txt">
+												<div class="sCases__top-content">
+													<div class="sCases__title">
+														Городское Новогоднее благотворительное
+														<br/>мероприятие г. Москва
+													</div>
+													<div class="sCases__list">
+														<ul>
+															<li>350 000 гостей</li>
+															<li>200 000 новогодних подарков</li>
+															<li>12 представителей СМИ</li>
+														</ul>
+													</div>
+												</div>
+												<div class="sCases__footer">
+													<div class="sCases__date"><span>Период проведения:</span><span>28.12.2019 - 8.01.2020</span>
+													</div>
+													<div class="sCases__role"><span>Роль:</span><span>Организатор</span>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="sCases__slide-content">
+										<div class="sCases__bg"><img class="swiper-lazy" src="#" data-src="img/@2x/cases-slide-2.jpg" alt=""/>
+										</div>
+										<div class="sCases__inner">
+											<div class="sCases__top-line">
+												<div class="sCases__logoes-cont">
+													<div class="sCases__logo"><img class="swiper-lazy" src="" data-src="img/@2x/cases-logo-2.png" alt=""/>
+													</div>
+												</div>
+												<div class="sCases__headline">
+													Послание Президента
+													<br/>РФ Федеральному
+													<br/>собранию
+												</div>
+											</div>
+											<div class="sCases__lower-txt">
+												<div class="sCases__top-content">
+													<div class="sCases__title">Место проведения: ЦВЗ «Манеж» г. Москва
+													</div>
+													<div class="sCases__list">
+														<ul>
+															<li>Более 1500 участников</li>
+															<li>Более 800 представителей СМИ</li>
+														</ul>
+													</div>
+												</div>
+												<div class="sCases__footer">
+													<div class="sCases__date"><span>Период проведения:</span><span>15.01.2020</span>
+													</div>
+													<div class="sCases__role"><span>Роль:</span><span>Техническая дирекция</span>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="sCases__slide-content">
+										<div class="sCases__bg"><img class="swiper-lazy" src="#" data-src="img/@2x/cases-slide-3.jpg" alt=""/>
+										</div>
+										<div class="sCases__inner">
+											<div class="sCases__top-line">
+												<div class="sCases__logoes-cont">
+													<div class="sCases__logo"><img class="swiper-lazy" src="" data-src="img/@2x/cases-logo-3.png" alt=""/>
+													</div>
+												</div>
+												<div class="sCases__headline">
+													Благотворительный фестиваль «Карусель
+													<br/>истории» в Центре
+													<br/>Прогресса Бокса
+												</div>
+											</div>
+											<div class="sCases__lower-txt">
+												<div class="sCases__top-content">
+													<div class="sCases__title">Ежегодное благотворительное мероприятие
+													</div>
+													<div class="sCases__list">
+														<ul>
+															<li>15 000 гостей</li>
+															<li>12 представителей СМИ</li>
+														</ul>
+													</div>
+												</div>
+												<div class="sCases__footer">
+													<div class="sCases__date"><span>Период проведения:</span><span>28.12.2019 - 8.01.2020</span>
+													</div>
+													<div class="sCases__role"><span>Роль:</span><span>Организатор</span>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="sCases__slide-content">
+										<div class="sCases__bg"><img class="swiper-lazy" src="#" data-src="img/@2x/cases-slide-4.jpg" alt=""/>
+										</div>
+										<div class="sCases__inner">
+											<div class="sCases__top-line">
+												<div class="sCases__logoes-cont">
+													<div class="sCases__logo"><img class="swiper-lazy" src="" data-src="img/@2x/cases-logo-4.png" alt=""/>
+													</div>
+												</div>
+												<div class="sCases__headline">
+													Non/fiction №21
+													<br/>Ярмарка интеллектуальной
+													<br/>литературы в Москве
+												</div>
+											</div>
+											<div class="sCases__lower-txt">
+												<div class="sCases__top-content">
+													<div class="sCases__title">Гостиный двор г. Москва
+													</div>
+													<div class="sCases__list">
+														<ul>
+															<li>29 стран-участниц</li>
+															<li>30 000 участников</li>
+														</ul>
+													</div>
+												</div>
+												<div class="sCases__footer">
+													<div class="sCases__date"><span>Период проведения:</span><span>22.12.2019 - 25.12.2019</span>
+													</div>
+													<div class="sCases__role"><span>Роль:</span><span>Подрядчик</span>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="sCases__slide-content">
+										<div class="sCases__bg"><img class="swiper-lazy" src="#" data-src="img/@2x/cases-slide-5.jpg" alt=""/>
+										</div>
+										<div class="sCases__inner">
+											<div class="sCases__top-line">
+												<div class="sCases__logoes-cont">
+													<div class="sCases__logo"><img class="swiper-lazy" src="" data-src="img/@2x/cases-logo-5.png" alt=""/>
+													</div>
+												</div>
+												<div class="sCases__headline">
+													Городской
+													<br/>праздник в честь
+													<br/>9 мая
+												</div>
+											</div>
+											<div class="sCases__lower-txt">
+												<div class="sCases__top-content">
+													<div class="sCases__title">Центр Прогресса Бокса г. Москва
+													</div>
+													<div class="sCases__list">
+														<ul>
+															<li>3 500 участников за 2 дня</li>
+															<li>Строительство игровых площадок и точек питания</li>
+														</ul>
+													</div>
+												</div>
+												<div class="sCases__footer">
+													<div class="sCases__date"><span>Период проведения:</span><span>8 - 9 мая 2019 г.</span>
+													</div>
+													<div class="sCases__role"><span>Роль:</span><span>Организатор</span>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="sCases__slide-content">
+										<div class="sCases__bg"><img class="swiper-lazy" src="#" data-src="img/@2x/cases-slide-6.jpg" alt=""/>
+										</div>
+										<div class="sCases__inner">
+											<div class="sCases__top-line">
+												<div class="sCases__logoes-cont">
+													<div class="sCases__logo"><img class="swiper-lazy" src="" data-src="img/@2x/cases-logo-6-1.png" alt=""/>
+													</div>
+													<div class="sCases__logo"><img class="swiper-lazy" src="" data-src="img/@2x/cases-logo-6-2.png" alt=""/>
+													</div>
+													<div class="sCases__logo"><img class="swiper-lazy" src="" data-src="img/@2x/cases-logo-6-3.png" alt=""/>
+													</div>
+												</div>
+												<div class="sCases__headline">
+													DME:
+													<br/>SWAT Challenge
+													<br/>Security Camp
+													<br/>Приток Camp
+												</div>
+											</div>
+											<div class="sCases__lower-txt">
+												<div class="sCases__top-content">
+													<div class="sCases__title">Ежегодное мероприятие для службы безопасности аэропорта Домодедово. Проводится с 2017 года по настоящее время
+													</div>
+													<div class="sCases__list">
+														<ul>
+															<li>Курс учебных миссий на базе пейнтбола (6 дней)</li>
+															<li>245 единиц пейнтбольного оборудования - электронные</li>
+															<li>Взаимодействие с военными советниками</li>
+														</ul>
+													</div>
+												</div>
+											</div>
+											<div class="sCases__footer">
+												<div class="sCases__date"><span>Период проведения:</span><span>с 2017 года</span>
+												</div>
+												<div class="sCases__role"><span>Роль:</span><span>Техническая дирекция</span>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="sCases__slide-content">
+										<div class="sCases__bg"><img class="swiper-lazy" src="#" data-src="img/@2x/cases-slide-7.jpg" alt=""/>
+										</div>
+										<div class="sCases__inner">
+											<div class="sCases__top-line">
+												<div class="sCases__logoes-cont">
+													<div class="sCases__logo"><img class="swiper-lazy" src="" data-src="img/@2x/cases-logo-7.png" alt=""/>
+													</div>
+												</div>
+												<div class="sCases__headline">
+													Кубок Москвы
+													<br/>по пейнтболу
+													<br/>2019
+												</div>
+											</div>
+											<div class="sCases__lower-txt">
+												<div class="sCases__top-content">
+													<div class="sCases__title">Спортивный турнир высокого уровня
+													</div>
+													<div class="sCases__list">
+														<ul>
+															<li>90 команд из 8-ми регионов России в 4-х дивизионах</li>
+															<li>Вся инфраструктура создана на месте</li>
+														</ul>
+													</div>
+												</div>
+												<div class="sCases__footer">
+													<div class="sCases__date"><span>Период проведения:</span><span>28.12.2019 - 8.01.2020</span>
+													</div>
+													<div class="sCases__role"><span>Роль:</span><span>Соорганизатор</span>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="sCases__slide-content">
+										<div class="sCases__bg"><img class="swiper-lazy" src="#" data-src="img/@2x/cases-slide-8.jpg" alt=""/>
+										</div>
+										<div class="sCases__inner">
+											<div class="sCases__top-line">
+												<div class="sCases__logoes-cont">
+													<div class="sCases__logo"><img class="swiper-lazy" src="" data-src="img/@2x/cases-logo-8.png" alt=""/>
+													</div>
+												</div>
+												<div class="sCases__headline">
+													Первый в России
+													<br/>и мире турнир
+													<br/>Battle Arena
+												</div>
+											</div>
+											<div class="sCases__lower-txt">
+												<div class="sCases__top-content">
+													<div class="sCases__title">ЦВЗ «Манеж» г. Москва
+													</div>
+													<div class="sCases__list">
+														<ul>
+															<li>Уникальный формат</li>
+															<li>Специально организованные площадки</li>
+															<li>Запись и трансляция с нашлемных камер</li>
+															<li>Комментирование в прямом эфире</li>
+														</ul>
+													</div>
+												</div>
+												<div class="sCases__footer">
+													<div class="sCases__date"><span>Период проведения:</span><span>15.01.2020</span>
+													</div>
+													<div class="sCases__role"><span>Роль:</span><span>Соорганизатор</span>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
 								</div>
 							</div>
-							<div class="col-lg-auto">
-								<form>
+						</div>
+						<div class="sCases__pugin cases-pugin-js">
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- end sCases-->
+			<!-- start sFormAlt-->
+			<div class="sFormAlt section" id="sFormAlt">
+				<div class="sFormAlt__bg"><img loading="lazy" src="img/svg/sForm-rain.svg" alt=""/>
+				</div>
+				<div class="sFormAlt__container container">
+					<div class="form-wrap">
+						<form>
+							<input type="hidden" name="example-input-field"/>
+							<input class="order" type="hidden" name="order" value="Заявка  с сайта"/>
+							<input class="utm_source" type="hidden" name="utm_source"/>
+							<input class="utm_term" type="hidden" name="utm_term"/>
+							<input class="utm_medium" type="hidden" name="utm_medium"/>
+							<input class="utm_campaign" type="hidden" name="utm_campaign"/>
+							<div class="form-wrap__man d-none d-md-block"><img loading="lazy" src="img/@2x/form-man.png" alt=""/>
+							</div>
+							<div class="form-wrap__form-content">
+								<div class="form-wrap__bg"><img loading="lazy" src="img/svg/form-rain-inner.svg" alt=""/>
+								</div>
+								<div class="form-wrap__txt-block">
+									<div class="form-wrap__questions">Есть вопросы  или хотите  организовать мероприятие?
+										<div class="text-danger">Напишите нам!</div>
+									</div>
+									<div class="form-wrap__small">Наши менеджеры сориентируют Вам по&nbsp;услугам и&nbsp;ценам в&nbsp;течении 20&nbsp;минут
+									</div>
+								</div>
+								<div class="form-wrap__inputs-block">
 									<div class="form-wrap__input-wrap form-group">
-										<label><span class="form-wrap__title">Ваше имя</span><input class="form-wrap__input form-control" type="text" placeholder="Имя" name="name"/>
+										<label><span class="form-wrap__title">Ваше имя</span><input class="form-wrap__input form-control" type="text" placeholder="Имя" name="name" value="Константин"/>
 										</label>
 									</div>
 									<!-- +e.input-wrap-->
 									<div class="form-wrap__input-wrap form-group">
-										<label><span class="form-wrap__title">Номер телефона</span><input class="form-wrap__input form-control" type="tel" placeholder="+7(___)___-__-__" name="tel"/>
+										<label><span class="form-wrap__title">Номер телефона</span><input class="form-wrap__input form-control" type="tel" placeholder="" name="tel"/>
 										</label>
 									</div>
 									<!-- +e.input-wrap-->
@@ -119,15 +679,47 @@
 										</label>
 									</div>
 									<!-- +e.input-wrap-->
-									<input class="btn btn-primary btn-block mb-3" type="submit" value="ОТПРАВИТЬ"/>
-									<div class="small">Согласен на обработку персональных данных</div>
-								</form>
+									<button class="form-wrap__send-btn" type="submit">ОТПРАВИТЬ
+									</button>
+									<div class="form-wrap__polite"><span>
+											Согласен на обработку
+											</span><a href="#">персональных данных</a>
+									</div>
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+			<!-- end sFormAlt-->
+			<!-- start sTeam-->
+			<section class="sTeam section" id="sTeam">
+				<div class="sTeam__container container">
+					<div class="section-title">
+						<h2>НАШа команда</h2>
+					</div>
+					<div class="sTeam__slider">
+						<div class="swiper-container partners-slider-js">
+							<div class="swiper-wrapper">
+								<div class="swiper-slide"><a class="sTeam__inner-link" href="#"><span class="sTeam__top-logo"><img class="swiper-lazy" src="#" data-src="img/@2x/partner-1.png" alt=""/></span><span class="sTeam__bg"><img class="swiper-lazy" src="#" data-src="img/@2x/sTeam-1.jpg" alt=""/></span></a>
+								</div>
+								<div class="swiper-slide"><a class="sTeam__inner-link" href="#"><span class="sTeam__top-logo"><img class="swiper-lazy" src="#" data-src="img/@2x/partner-2.png" alt=""/></span><span class="sTeam__bg top-red-line"><img class="swiper-lazy" src="#" data-src="img/@2x/sTeam-2.jpg" alt=""/></span></a>
+								</div>
+								<div class="swiper-slide"><a class="sTeam__inner-link" href="#"><span class="sTeam__top-logo"><img class="swiper-lazy" src="#" data-src="img/@2x/partner-3.png" alt=""/></span><span class="sTeam__bg top-red-line"><img class="swiper-lazy" src="#" data-src="img/@2x/sTeam-3.jpg" alt=""/></span></a>
+								</div>
+								<div class="swiper-slide"><a class="sTeam__inner-link" href="#"><span class="sTeam__top-logo"><img class="swiper-lazy" src="#" data-src="img/@2x/partner-4.png" alt=""/></span><span class="sTeam__bg"><img class="swiper-lazy" src="#" data-src="img/@2x/sTeam-4.jpg" alt=""/></span></a>
+								</div>
+								<div class="swiper-slide"><a class="sTeam__inner-link" href="#"><span class="sTeam__top-logo"><img class="swiper-lazy" src="#" data-src="img/@2x/partner-5.png" alt=""/></span><span class="sTeam__bg"><img class="swiper-lazy" src="#" data-src="img/@2x/sTeam-5.jpg" alt=""/></span></a>
+								</div>
+								<div class="swiper-slide"><a class="sTeam__inner-link" href="#"><span class="sTeam__top-logo"><img class="swiper-lazy" src="#" data-src="img/@2x/partner-6.png" alt=""/></span><span class="sTeam__bg top-red-line"><img class="swiper-lazy" src="#" data-src="img/@2x/sTeam-6.jpg" alt=""/></span></a>
+								</div>
 							</div>
 						</div>
 					</div>
 				</div>
 			</section>
-			<!-- end sForm-->
+			<!-- end sTeam-->
+			<!--+sForm()-->
 			<footer class="footer block-with-lazy">
 				<div class="container">
 					<div class="footer__inner">
@@ -197,6 +789,7 @@
 		<script src="libs/@fancyapps/fancybox/jquery.fancybox.min.js"></script>
 		<!-- modal libs-->
 		<!-- slider libs-->
+		<script src="libs/swiper/js/swiper.min.js"></script>
 		<!-- /slider libs-->
 		<script src="libs/inputmask/jquery.inputmask.min.js"></script>
 		<script src="js/common.js"></script>

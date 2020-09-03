@@ -1,0 +1,89 @@
+mixin sAbout()
+	// start sAbout
+	+b.SECTION.sAbout.section#sAbout&attributes(attributes)
+		//-bg
+		+e.red-block
+		+e.left-rain
+			img(loading="lazy" src="img/svg/sAbout-left-rain.svg" alt="")
+		+e.right-rain
+			img(loading="lazy" src="img/svg/sAbout-right-rain.svg" alt="")
+		//-
+		.container
+			//-+b.section-title
+				h2 sAbout
+			+e.row.row
+				+e.descr-col.col-lg-7
+					+e.txt-cont
+						+e.left-col-bg
+							img(loading="lazy" src="img/@2x/sAbout-left-col-bg.jpg" alt="")
+						+e.company-descr
+							h2 О компании
+							p
+								| ЯRPLAY&nbsp;- это команда людей, которые знают и&nbsp;любят свою работу.
+								|
+								br
+								| Мы&nbsp;знаем, что такое &laquo;гибкость&raquo; и&nbsp;&laquo;прозрачность&raquo;, работаем с&nbsp;проектами независимо от&nbsp;их&nbsp;бюджета. Мы&nbsp;добивается максимально высокого уровня организации и&nbsp;проведения как корпоративных тимбилдингов, так и&nbsp;самых знаковых мероприятий городского и&nbsp;Федерального масштаба!
+						+e.list-bl
+							+e.list-title Сегодня ЯRPLAY – это:
+							ul
+								li 300+ сотрудников
+								li 100+ реализованных проектов
+								li 7&nbsp;направлений деятельности
+								li собственные производственные площади
+								li материально-техническая база современного оборудования для организации и&nbsp;проведения мероприятий любого масштаба на&nbsp;территории России и&nbsp;СНГ
+						+e.A.video-link(href='#')
+							span Смотреть видео
+							span о компании
+				+e.president-col.col-lg-5
+					+e.right-col-content
+						+e.trapezoid-bg.trapezoid-bg-js
+						+e.pres-title
+							h4 Обращение президента компании
+							p А.Н. Ткачук
+						+e.pres-descr
+							p
+								| Группа компаний ЯРПЛЕЙ&nbsp;&mdash; создаем условия для успешного мероприятия.
+								br
+								| Команда работающая&nbsp;на результат. Придумаем концепцию, разработаем, построим и&nbsp;проведем мероприятие для вас и ваших&nbsp;гостей в&nbsp;Москве и&nbsp;РФ.
+						+e.pres-portrait
+							img(loading="lazy" src="img/@2x/president.png" alt="")
+			+e.convince-row.row
+				+convinceItem()
+					| Понимание особенностей и
+					|
+					br
+					| индивидуальный подход к
+					|
+					br
+					| каждому клиенту
+				+convinceItem()
+					| Доступность 24/7 для решения
+					|
+					br
+					| любых вопросов
+				+convinceItem()
+					| Реализация любых потребностей заказчика, гибкость и&nbsp;оперативность в&nbsp;решении сложных вопросов
+				+convinceItem()
+					| Детальная проработка и
+					|
+					br
+					| составления программ
+					|
+					br
+					| любой сложности
+				+convinceItem()
+					| Наличие своей технической базы:
+					|
+					br
+					| световое и&nbsp;звуковое оборудование,
+					|
+					br
+					| мебель, экипировка и&nbsp;т.д.
+				+convinceItem()
+					| Работа без подрядчиков, экономия Вашего бюджета, предоставление детальной сметы и&nbsp;документации по&nbsp;проекту
+	// end sAbout
+
+mixin convinceItem()
+	.col-lg-4.col-sm-6
+		+e.convince-txt
+			block

@@ -1,0 +1,24 @@
+mixin sTeam()
+	// start sTeam
+	+b.SECTION.sTeam.section#sTeam&attributes(attributes)
+		+e.container.container
+			+b.section-title
+				h2 НАШа команда
+			+e.slider
+				.swiper-container.partners-slider-js
+					.swiper-wrapper
+						+teamSlide(1)
+						+teamSlide(2, 'top-red-line')
+						+teamSlide(3, 'top-red-line')
+						+teamSlide(4)
+						+teamSlide(5)
+						+teamSlide(6, 'top-red-line')
+	// end sTeam
+
+mixin teamSlide(imgNum, bgClasses='')
+	.swiper-slide
+		+e.A.inner-link(href='#')
+			+e.top-logo
+				img.swiper-lazy(src="#" data-src=`img/@2x/partner-${imgNum}.png` alt="")
+			+e.bg(class=bgClasses)
+				img.swiper-lazy(src="#" data-src=`img/@2x/sTeam-${imgNum}.jpg` alt="")

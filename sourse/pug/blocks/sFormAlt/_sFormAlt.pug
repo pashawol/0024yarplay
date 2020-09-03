@@ -1,0 +1,29 @@
+mixin sFormAlt()
+	// start sFormAlt
+	+b.sFormAlt.section#sFormAlt&attributes(attributes)
+		+e.bg
+			img(loading="lazy" src="img/svg/sForm-rain.svg" alt="")
+		+e.container.container
+			+form-wrap
+				+e.man.d-none.d-md-block
+					img(loading='lazy' src="img/@2x/form-man.png" alt="")
+				+e.form-content
+					+e.bg
+						img(loading='lazy' src='img/svg/form-rain-inner.svg' alt="")
+					+e.txt-block
+						+e.questions
+							| Есть вопросы  или хотите  организовать мероприятие?
+							.text-danger Напишите нам!
+						+e.small Наши менеджеры сориентируют Вам по&nbsp;услугам и&nbsp;ценам в&nbsp;течении 20&nbsp;минут
+					+e.inputs-block
+						+input('Имя', 'text', 'Ваше имя', 'name')(value='Константин')
+						+input('', 'tel', 'Номер телефона')
+						+input('sample@sample.com', 'email', 'Ваш e-mail')
+						+e.BUTTON.send-btn(type='submit') ОТПРАВИТЬ
+						+e.polite
+							span
+								| Согласен на обработку
+								|
+							a(href="#") персональных данных
+
+	// end sFormAlt

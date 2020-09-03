@@ -14,24 +14,28 @@ mixin mob-mnu()
 		+b.toggle-menu-mobile--js
 			span
 		+e.inner
-		
+			+e.logo
+				a(href="/")
+					img(src="img/logo.svg", alt="")
 			+mnu()
 			.text-right
 	//  мобильное меню
 mixin top-nav() 
 	// start top-nav
 	+b.top-nav.block-with-lazy
-		.container
+		+e.container.container
 			.row
 				.col-lg-auto.col
 					+e.logo
 						a(href="/")
 							img(src="img/logo.svg", alt="")
 				.col.d-none.d-lg-block
-					//- +mnu()
-				.col-sm-auto.text-sm-right
+					block
+				+e.contacts-col.col-sm-auto.text-sm-right.order-sm-0.order-last
 					+e.link--tel(href="tel:8499490-33-24") 8 499 490-33-24
 					br
 					+e.link--mail(href="mailto:info@yarplay.ru") info@yarplay.ru
+				+e.mob-mnu-col.col-auto.d-block.d-lg-none
+					+mob-mnu()
 					
 	// end top-nav

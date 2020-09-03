@@ -106,12 +106,12 @@ var JSCCommon = {
 
 function eventHandler() {
 	JSCCommon.modalCall(); // JSCCommon.tabscostume('tabs');
-	// JSCCommon.mobileMenu();
 
+	JSCCommon.mobileMenu();
 	JSCCommon.inputMask(); // JSCCommon.CustomInputFile();
 	// добавляет подложку для pixel perfect
-	// $(".main-wrapper").after('<div class="pixel-perfect" style="background-image: url(screen/main.jpg);"></div>')
-	// /добавляет подложку для pixel perfect
+
+	$(".main-wrapper").after('<div class="pixel-perfect" style="background-image: url(screen/home.png);"></div>'); // /добавляет подложку для pixel perfect
 	// const url = document.location.href;
 	// $.each($(".top-nav__nav a "), function() {
 	// 	if (this.href == url) {
@@ -196,7 +196,78 @@ function eventHandler() {
 
 	if (isIE11) {
 		$("body").prepend("<p   class=\"browsehappy container\">\u041A \u0441\u043E\u0436\u0430\u043B\u0435\u043D\u0438\u044E, \u0432\u044B \u0438\u0441\u043F\u043E\u043B\u044C\u0437\u0443\u0435\u0442\u0435 \u0443\u0441\u0442\u0430\u0440\u0435\u0432\u0448\u0438\u0439 \u0431\u0440\u0430\u0443\u0437\u0435\u0440. \u041F\u043E\u0436\u0430\u043B\u0443\u0439\u0441\u0442\u0430, <a href=\"http://browsehappy.com/\" target=\"_blank\">\u043E\u0431\u043D\u043E\u0432\u0438\u0442\u0435 \u0432\u0430\u0448 \u0431\u0440\u0430\u0443\u0437\u0435\u0440</a>, \u0447\u0442\u043E\u0431\u044B \u0443\u043B\u0443\u0447\u0448\u0438\u0442\u044C \u043F\u0440\u043E\u0438\u0437\u0432\u043E\u0434\u0438\u0442\u0435\u043B\u044C\u043D\u043E\u0441\u0442\u044C, \u043A\u0430\u0447\u0435\u0441\u0442\u0432\u043E \u043E\u0442\u043E\u0431\u0440\u0430\u0436\u0430\u0435\u043C\u043E\u0433\u043E \u043C\u0430\u0442\u0435\u0440\u0438\u0430\u043B\u0430 \u0438 \u043F\u043E\u0432\u044B\u0441\u0438\u0442\u044C \u0431\u0435\u0437\u043E\u043F\u0430\u0441\u043D\u043E\u0441\u0442\u044C.</p>");
+	} //luckyoneJs
+	//shape js
+
+
+	var oldShape = {};
+
+	function DrawShape() {
+		//trap === trapezoid shape
+		var trap = document.querySelector('.trapezoid-bg-js');
+		if (!trap) return;
+		var col = trap.parentElement;
+		var colWidth = col.offsetWidth;
+		var colHeight = col.offsetHeight;
+
+		if (oldShape.shapeHeight === colHeight && oldShape.shapeWidth === colWidth) {
+			//console.log('nothing changes');
+			return;
+		} else {
+			trap.style.borderBottom = "".concat(colHeight, "px solid #2D2D2D");
+			trap.style.borderRight = "".concat(colWidth * 0.2378, "px solid transparent"); //- 176/739.5=0.2378
+
+			trap.style.width = "".concat(colWidth, "px");
+			oldShape.shapeHeight = colHeight;
+			oldShape.shapeWidth = colWidth;
+		}
 	}
+
+	window.addEventListener('resize', DrawShape, {
+		passive: true
+	});
+	window.setTimeout(DrawShape, 300); //cases slider
+
+	var casesSlider = new Swiper('.cases-slider-js', {
+		slidesPerView: 'auto',
+		loop: true,
+		//lazy
+		lazy: {
+			loadPrevNext: true,
+			loadPrevNextAmount: 10
+		},
+		//
+		breakpoints: {
+			996: {
+				spaceBetween: 35
+			},
+			0: {
+				spaceBetween: 20
+			}
+		},
+		//pugin
+		pagination: {
+			el: $(this).find('.cases-pugin-js'),
+			clickable: true
+		}
+	}); //prev,next
+
+	$('.cases-prev-js').click(function () {
+		casesSlider.slidePrev();
+	});
+	$('.cases-next-js').click(function () {
+		casesSlider.slideNext();
+	}); //partners slider
+
+	var partnersSlider = new Swiper('.partners-slider-js', {
+		slidesPerView: 'auto',
+		spaceBetween: 30,
+		//lazy
+		lazy: {
+			loadPrevNext: true,
+			loadPrevNextAmount: 12
+		}
+	}); //end luckyoneJs
 }
 
 ;

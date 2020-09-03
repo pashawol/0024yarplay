@@ -1,0 +1,48 @@
+mixin sTopCards()
+	// start sTopCards
+	+b.sTopCards.section#sTopCards&attributes(attributes)
+		.container
+			+e.row.row
+				+topCard(1)
+					h5
+						| Спортивные
+						br
+						| мероприятия
+					p
+						| Организуем все виды спортивных мероприятий. Работаем с
+						| проектами независимо от&nbsp;их&nbsp;масштаба. Поможем, подскажем, подберем формат под задачи&nbsp;и бюджет
+				+topCard(2)
+					h5 Частные мероприятия и&nbsp;праздники
+					p
+						| Воплощаем самые неординарные идеи создавая яркие
+						br
+						| события и&nbsp;приятные эмоции.
+				+topCard(3)
+					h5
+						| Корпоративные
+						br
+						| мероприятия
+					p Многолетний опыт работы позволяет нам воплощать проекты любого формата на&nbsp;высоком уровне.
+				+topCard(4)
+					h5
+						| Массовые
+						br
+						| мероприятия
+					p
+						| Осуществляем комплексное сопровождение всех проектов, в&nbsp;основе
+						br
+						| которого оптимизация расходов наших клиентов.
+	// end sTopCards
+
+mixin topCard(imgNum)
+	+e.col.col-xl-6
+		+e.card-cont
+			+e.bg-cont
+				+pic(`top-card-${imgNum}`, null, null)(class="sTopCards__bg")
+			+e.txt
+				block
+				+e.detail-link(href="#")
+					.txt Подробнее
+					+icon('chevron-down')
+			+e.pic-cont.d-none.d-sm-block
+				+pic(`top-card-${imgNum}`, null, null)(class="sTopCards__picture")
