@@ -2,23 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4ae3360a-0509-4b84-b3c3-e71404ad5266" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/public/css/main.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/main.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/img/svg/sprite.svg" beforeDir="false" afterPath="$PROJECT_DIR$/public/img/svg/sprite.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/common.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/common.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/libs/inputmask/inputmask.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/libs/inputmask/inputmask.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/libs/inputmask/jquery.inputmask.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/libs/inputmask/jquery.inputmask.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sourse/js/common.js" beforeDir="false" afterPath="$PROJECT_DIR$/sourse/js/common.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sourse/pug/blocks/mixin-wrap/components/menu.pug" beforeDir="false" afterPath="$PROJECT_DIR$/sourse/pug/blocks/mixin-wrap/components/menu.pug" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sourse/pug/blocks/top-nav/_menu-mobile.scss" beforeDir="false" afterPath="$PROJECT_DIR$/sourse/pug/blocks/top-nav/_menu-mobile.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sourse/pug/blocks/top-nav/_top-nav.pug" beforeDir="false" afterPath="$PROJECT_DIR$/sourse/pug/blocks/top-nav/_top-nav.pug" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sourse/pug/blocks/top-nav/_top-nav.scss" beforeDir="false" afterPath="$PROJECT_DIR$/sourse/pug/blocks/top-nav/_top-nav.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sourse/pug/pages/index.pug" beforeDir="false" afterPath="$PROJECT_DIR$/sourse/pug/pages/index.pug" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sourse/pug/pages/layout/js-css.pug" beforeDir="false" afterPath="$PROJECT_DIR$/sourse/pug/pages/layout/js-css.pug" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sourse/sass/_base.scss" beforeDir="false" afterPath="$PROJECT_DIR$/sourse/sass/_base.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sourse/sass/_sprite.scss" beforeDir="false" afterPath="$PROJECT_DIR$/sourse/sass/_sprite.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sourse/sass/_vars.scss" beforeDir="false" afterPath="$PROJECT_DIR$/sourse/sass/_vars.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sourse/sass/sprite.svg" beforeDir="false" afterPath="$PROJECT_DIR$/sourse/sass/sprite.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/readme.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -85,7 +69,7 @@
       <workItem from="1598951224032" duration="22245000" />
       <workItem from="1598995674761" duration="5004000" />
       <workItem from="1599035630039" duration="16539000" />
-      <workItem from="1599082422367" duration="9050000" />
+      <workItem from="1599082422367" duration="9223000" />
     </task>
     <servers />
   </component>
@@ -97,22 +81,22 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1599002157956" />
-    <state width="1877" height="172" key="GridCell.Tab.0.bottom" timestamp="1599088587714">
+    <state width="1877" height="172" key="GridCell.Tab.0.bottom" timestamp="1599091986809">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="172" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1599088587714" />
-    <state width="1877" height="172" key="GridCell.Tab.0.center" timestamp="1599088587714">
+    <state width="1877" height="172" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1599091986809" />
+    <state width="1877" height="172" key="GridCell.Tab.0.center" timestamp="1599091986808">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="172" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1599088587714" />
-    <state width="1877" height="172" key="GridCell.Tab.0.left" timestamp="1599088587714">
+    <state width="1877" height="172" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1599091986808" />
+    <state width="1877" height="172" key="GridCell.Tab.0.left" timestamp="1599091986808">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="172" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1599088587714" />
-    <state width="1877" height="172" key="GridCell.Tab.0.right" timestamp="1599088587714">
+    <state width="1877" height="172" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1599091986808" />
+    <state width="1877" height="172" key="GridCell.Tab.0.right" timestamp="1599091986808">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="172" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1599088587714" />
+    <state width="1877" height="172" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1599091986808" />
     <state x="461" y="165" key="SettingsEditor" timestamp="1598959404107">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
