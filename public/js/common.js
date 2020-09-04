@@ -199,34 +199,30 @@ function eventHandler() {
 	} //luckyoneJs
 	//shape js
 
-
-	var oldShape = {};
-
+	/*let oldShape = {};
 	function DrawShape() {
 		//trap === trapezoid shape
-		var trap = document.querySelector('.trapezoid-bg-js');
-		if (!trap) return;
-		var col = trap.parentElement;
-		var colWidth = col.offsetWidth;
-		var colHeight = col.offsetHeight;
-
-		if (oldShape.shapeHeight === colHeight && oldShape.shapeWidth === colWidth) {
+		let trap = document.querySelector('.trapezoid-bg-js');
+		if (!trap) return
+			let col = trap.parentElement;
+		let colWidth = col.offsetWidth;
+		let colHeight = col.offsetHeight;
+			if (oldShape.shapeHeight === colHeight && oldShape.shapeWidth === colWidth){
 			//console.log('nothing changes');
-			return;
-		} else {
-			trap.style.borderBottom = "".concat(colHeight, "px solid #2D2D2D");
-			trap.style.borderRight = "".concat(colWidth * 0.2378, "px solid transparent"); //- 176/739.5=0.2378
-
-			trap.style.width = "".concat(colWidth, "px");
-			oldShape.shapeHeight = colHeight;
+			return
+		}
+		else{
+			trap.style.borderBottom = `${colHeight}px solid #2D2D2D`;
+			trap.style.borderRight = `${colWidth * 0.2378}px solid transparent`; //- 176/739.5=0.2378
+			trap.style.width = `${colWidth}px`;
+				oldShape.shapeHeight = colHeight;
 			oldShape.shapeWidth = colWidth;
 		}
 	}
+	window.addEventListener('resize', DrawShape, {passive: true});
+	window.setTimeout(DrawShape, 300);*/
+	//cases slider
 
-	window.addEventListener('resize', DrawShape, {
-		passive: true
-	});
-	window.setTimeout(DrawShape, 300); //cases slider
 
 	var casesSlider = new Swiper('.cases-slider-js', {
 		slidesPerView: 'auto',

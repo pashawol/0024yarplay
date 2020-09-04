@@ -233,7 +233,7 @@ function eventHandler() {
 
 	//shape js
 
-	let oldShape = {};
+	/*let oldShape = {};
 	function DrawShape() {
 		//trap === trapezoid shape
 		let trap = document.querySelector('.trapezoid-bg-js');
@@ -257,7 +257,7 @@ function eventHandler() {
 		}
 	}
 	window.addEventListener('resize', DrawShape, {passive: true});
-	window.setTimeout(DrawShape, 300);
+	window.setTimeout(DrawShape, 300);*/
 
 	//cases slider
 	let casesSlider =  new Swiper('.cases-slider-js', {
